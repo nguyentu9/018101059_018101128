@@ -1,4 +1,5 @@
 # Lập trình cơ sở dữ liệu
+[Xem file SQL ở đây](../blob/master/018101059_018101128/QLTV.sql)
 ---
 MSSV | Họ tên
 --- | ---
