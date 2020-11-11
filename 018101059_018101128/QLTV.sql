@@ -172,6 +172,7 @@ insert into TACGIA values ('TG13',N'Nguyẽn Thị Nhung');
 insert into TACGIA values ('TG14',N'Trần Tình');
 
 
+
 insert into SACH values ('VH',N'Xã hội học văn hóa','KHXH','TG01',N'NXB Khoa học xã hội',2004,50);
 insert into SACH values ('DLKS',N'Giáo trình kinh tế du lịch','KHXH','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
 insert into SACH values ('TH',N'Giáo trình Logic và ứng dụng','SP','TG03',N'NXB Xây dựng',1999,70);
