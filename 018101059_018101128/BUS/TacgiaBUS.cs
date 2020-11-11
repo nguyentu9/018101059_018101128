@@ -8,6 +8,6 @@ namespace _018101059_018101128.BUS
 {
     class TacgiaBUS
     {
-        public string ten { get; set; }
+
     }
 }
