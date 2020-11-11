@@ -9,6 +9,7 @@ namespace _018101059_018101128.DTO
     class TacgiaDTO
     {
         public string matacgia { get; set; }
+
         public string tentacgia { get; set; }
     }
 }
