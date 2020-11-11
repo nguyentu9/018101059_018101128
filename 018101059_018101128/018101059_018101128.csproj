@@ -232,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Note.txt" />
+    <Content Include="QLTV.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
