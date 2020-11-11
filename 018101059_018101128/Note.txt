@@ -1,0 +1,16 @@
+﻿Đã code xong - chờ test cho đúng business:
+# Thanh
+	frmKhoa
+	frmNhanVien
+# Toàn
+	frmTacgia
+	frmNhaCungCap : (sửa lỗi)
+		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
+
+
+
+
+
+
+
+* ĐÃ HOÀN THÀNH:
