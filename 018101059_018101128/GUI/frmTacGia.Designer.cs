@@ -79,14 +79,18 @@
             this.lvtacgia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.lvtacgia.FullRowSelect = true;
+            this.lvtacgia.GridLines = true;
             this.lvtacgia.HideSelection = false;
             this.lvtacgia.Location = new System.Drawing.Point(100, 158);
-            this.lvtacgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvtacgia.Margin = new System.Windows.Forms.Padding(2);
             this.lvtacgia.Name = "lvtacgia";
-            this.lvtacgia.Size = new System.Drawing.Size(383, 95);
+            this.lvtacgia.Size = new System.Drawing.Size(350, 95);
             this.lvtacgia.TabIndex = 1;
             this.lvtacgia.UseCompatibleStateImageBehavior = false;
             this.lvtacgia.View = System.Windows.Forms.View.Details;
+            this.lvtacgia.SelectedIndexChanged += new System.EventHandler(this.lvtacgia_SelectedIndexChanged);
+            this.lvtacgia.Click += new System.EventHandler(this.lvtacgia_Click);
             // 
             // columnHeader1
             // 
@@ -96,52 +100,56 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên Tác Giả";
-            this.columnHeader2.Width = 255;
+            this.columnHeader2.Width = 200;
             // 
             // btnthem
             // 
             this.btnthem.Location = new System.Drawing.Point(22, 272);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(109, 47);
             this.btnthem.TabIndex = 2;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnghi
             // 
             this.btnghi.Location = new System.Drawing.Point(135, 272);
-            this.btnghi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnghi.Margin = new System.Windows.Forms.Padding(2);
             this.btnghi.Name = "btnghi";
             this.btnghi.Size = new System.Drawing.Size(109, 47);
             this.btnghi.TabIndex = 2;
             this.btnghi.Text = "Ghi";
             this.btnghi.UseVisualStyleBackColor = true;
+            this.btnghi.Click += new System.EventHandler(this.btnghi_Click);
             // 
             // btnxoa
             // 
             this.btnxoa.Location = new System.Drawing.Point(248, 272);
-            this.btnxoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(109, 47);
             this.btnxoa.TabIndex = 2;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btncapnhat
             // 
             this.btncapnhat.Location = new System.Drawing.Point(362, 272);
-            this.btncapnhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncapnhat.Margin = new System.Windows.Forms.Padding(2);
             this.btncapnhat.Name = "btncapnhat";
             this.btncapnhat.Size = new System.Drawing.Size(109, 47);
             this.btncapnhat.TabIndex = 2;
             this.btncapnhat.Text = "Cập nhật";
             this.btncapnhat.UseVisualStyleBackColor = true;
+            this.btncapnhat.Click += new System.EventHandler(this.btncapnhat_Click);
             // 
             // btnthoat
             // 
             this.btnthoat.Location = new System.Drawing.Point(475, 272);
-            this.btnthoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnthoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(109, 47);
             this.btnthoat.TabIndex = 2;
@@ -152,7 +160,7 @@
             // txttentacgia
             // 
             this.txttentacgia.Location = new System.Drawing.Point(211, 106);
-            this.txttentacgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttentacgia.Margin = new System.Windows.Forms.Padding(2);
             this.txttentacgia.Name = "txttentacgia";
             this.txttentacgia.Size = new System.Drawing.Size(170, 20);
             this.txttentacgia.TabIndex = 3;
@@ -160,7 +168,7 @@
             // txtmatacgia
             // 
             this.txtmatacgia.Location = new System.Drawing.Point(211, 61);
-            this.txtmatacgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmatacgia.Margin = new System.Windows.Forms.Padding(2);
             this.txtmatacgia.Name = "txtmatacgia";
             this.txtmatacgia.Size = new System.Drawing.Size(170, 20);
             this.txtmatacgia.TabIndex = 3;
@@ -181,9 +189,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTacGia";
             this.Text = "frmTacGia";
+            this.Load += new System.EventHandler(this.frmTacGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
