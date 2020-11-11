@@ -31,6 +31,8 @@ namespace _018101059_018101128.GUI
             {
                 lvncc.Items.Add(dt.Rows[i]["MANCC"].ToString());
                 lvncc.Items[i].SubItems.Add(dt.Rows[i]["TENNCC"].ToString());
+                lvncc.Items[i].SubItems.Add(dt.Rows[i]["DIACHI"].ToString());
+                lvncc.Items[i].SubItems.Add(dt.Rows[i]["SDT"].ToString());
             }
 
         }
@@ -92,6 +94,8 @@ namespace _018101059_018101128.GUI
         {
             txtmancc.Text = lvncc.SelectedItems[0].SubItems[0].Text;
             txttenncc.Text = lvncc.SelectedItems[0].SubItems[1].Text;
+            txtdiachi.Text = lvncc.SelectedItems[0].SubItems[2].Text;
+            txtsdt.Text = lvncc.SelectedItems[0].SubItems[3].Text;
         }
     }
 }
