@@ -10,11 +10,21 @@ namespace _018101059_018101128.DAO
 {
     class PhieunhapDAO
     {
-        public static DataTable Phieunhap()
+
+        public static DataTable Cbb_Phieunhap()
         {
-            string s = "Select p.MANV, HOTEN, p.MANCC, TENNCC, NGAYNHAP, MAPN " +
+            string s = "select MAPN from PHIEUNHAP";
+            DataTable dt = new DataTable();
+            dt = KetnoiCSDL.ExcuteQuery(s);
+            return dt;
+        }
+
+
+        public static DataTable CT_Phieunhap(string mapn)
+        {
+            string s = "Select n.MANV, HOTEN, c.MANCC, TENNCC, NGAYNHAP, MAPN " +
                 "From PHIEUNHAP p, NHANVIEN n, NHACC c " +
-                "where p.MANV=n.MANV and p.MANCC=c.MANCC";
+                "where p.MANV=n.MANV and p.MANCC=c.MANCC and MAPN='"+mapn+"'";
             DataTable dt = new DataTable();
             dt = KetnoiCSDL.ExcuteQuery(s);
             return dt;

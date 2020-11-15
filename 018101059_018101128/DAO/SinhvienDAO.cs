@@ -24,14 +24,7 @@ namespace _018101059_018101128.DAO
             dt = KetnoiCSDL.ExcuteQuery(s);
             return dt;
         }
-        public static DataTable Thongtin_CT(string masv)
-        {
-            string s = "Select MASV,HOTEN, NGAYSINH, GIOITINH, DIACHI, SDT, s.MAKHOA, TENKHOA " +
-                "From SINHVIEN s, KHOA k where s.MAKHOA=k.MAKHOA and MASV='"+masv+"'";
-            DataTable dt = new DataTable();
-            dt = KetnoiCSDL.ExcuteQuery(s);
-            return dt;
-        }
+       
         public static void ThemSV(SinhvienDTO sv)
         {
             string s = "insert into SINHVIEN values('" +sv.masv+ "', N'" +sv.hoten+ "','" +sv.gioitinh+ "','" +sv.makhoa+ "','" +sv.ngaysinh+ "',N'" +sv.diachi+ "','" +sv.sdt+ "')";

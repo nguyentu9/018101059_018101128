@@ -1,8 +1,14 @@
 ﻿Đã code xong - chờ test cho đúng business:
 # Thanh
+code lần 1:
 	frmKhoa
 	frmNhanVien
+		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
+code lần 2:
 	frmSinhVien
+		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
+	frmPhieuNhap
+	frmLoaiSach
 # Toàn
 	frmTacgia
 	frmNhaCungCap : (sửa lỗi)

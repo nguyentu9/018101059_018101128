@@ -24,12 +24,7 @@ namespace _018101059_018101128.BUS
             dt = SinhvienDAO.Thongtin_Khoa();
             return dt;
         }
-        public static DataTable Thongtin_CT(string masv)
-        {
-            DataTable dt = new DataTable();
-            dt = SinhvienDAO.Thongtin_CT(masv);
-            return dt;
-        }
+      
         public static void ThemSV(SinhvienDTO sv)
         {
             try
@@ -38,7 +33,7 @@ namespace _018101059_018101128.BUS
             }
             catch (Exception)
             {
-                MessageBox.Show("Them sinh vien khong thanh cong");
+                MessageBox.Show("Thêm sinh viên không thành công");
             }
         }
         public static void CapnhatSV(SinhvienDTO sv)
@@ -49,19 +44,19 @@ namespace _018101059_018101128.BUS
             }
             catch (Exception)
             {
-                MessageBox.Show("Khong the cap nhat sinh vien");
+                MessageBox.Show("Không thể cập nhật sinh viên");
             }
         }
         public static void XoaSV(SinhvienDTO sv)
         {
-            if ((MessageBox.Show("Ban co muon xoa sinh vien nay?", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            if ((MessageBox.Show("Bạn có muốn xóa sinh viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 try
                 {
                     SinhvienDAO.XoaSV(sv);
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Khong the xoa sinh vien nay");
+                    MessageBox.Show("Không thể xóa sinh viên");
                 }
         }
     }

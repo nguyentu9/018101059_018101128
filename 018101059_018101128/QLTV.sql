@@ -196,7 +196,9 @@ insert into NHACC values('KDB', N'Kim Đồng Book' ,N'Hà Nội', '0287652145')
 insert into SINHVIEN values('SV001',N'Trần Văn Triều','1','XH','1/2/2000',N'Tiền Giang','0287652145');
 insert into SINHVIEN values('SV002',N'Nguyễn Thanh Mai','0','TN','2/1/2000',N'Bến Tre','0234543223');
 
-
+insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
+insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
+insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
 
 
