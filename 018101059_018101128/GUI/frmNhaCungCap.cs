@@ -97,5 +97,16 @@ namespace _018101059_018101128.GUI
             txtdiachi.Text = lvncc.SelectedItems[0].SubItems[2].Text;
             txtsdt.Text = lvncc.SelectedItems[0].SubItems[3].Text;
         }
+
+        private void txtsdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsNumber(e.KeyChar) & (Keys)e.KeyChar != Keys.Back)
+            {
+                e.Handled = true;
+                MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+
+        }
     }
 }

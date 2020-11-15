@@ -2,6 +2,7 @@
 # Thanh
 	frmKhoa
 	frmNhanVien
+	frmSinhVien
 # Toàn
 	frmTacgia
 	frmNhaCungCap : (sửa lỗi)

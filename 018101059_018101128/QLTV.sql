@@ -37,6 +37,7 @@ go
 create table SINHVIEN(
 	MASV varchar(10) primary key (MASV), 
 	HOTEN nvarchar(40), 
+	GIOITINH bit,
 	MAKHOA varchar(10),
 	NGAYSINH datetime, 
 	DIACHI nvarchar(40), 
@@ -137,9 +138,6 @@ create table TAIKHOAN (
 	MATKHAU varchar(10)
 )
 
-insert into NHANVIEN (MANV, HOTEN, NGAYSINH,GIOITINH, DIACHI,SDT) values ('NV01', N'Nguyễn Thị Nữ ',' 1/1/1995','0',N'Cái Bè','0123456789');
-insert into NHANVIEN (MANV, HOTEN, NGAYSINH,GIOITINH, DIACHI,SDT) values ('NV02', N'Nguyễn Thị Gái ', '1/1/1990','0',N'Mỹ Tho','1234567890');
-insert into NHANVIEN (MANV, HOTEN, NGAYSINH,GIOITINH, DIACHI,SDT) values ('NV03', N'Nguyễn Văn Trai', '1/1/1994','1',N'Gò Công','1234567890');
 
 insert into KHOA values ('TN',N'KHOA HỌC TỰ NHIÊN');
 insert into KHOA values ('XH', N'KHOA HỌC XÃ HỘI');
@@ -171,7 +169,9 @@ insert into TACGIA values ('TG12',N'GS.TS.Nguyên Kim Độ');
 insert into TACGIA values ('TG13',N'Nguyẽn Thị Nhung');
 insert into TACGIA values ('TG14',N'Trần Tình');
 
-
+insert into NHANVIEN values ('NV01', N'Nguyễn Thị Hoa',' 1/1/1995','0',N'Vĩnh Long','0987654321');
+insert into NHANVIEN values ('NV02', N'Nguyễn Thị Thúy Hiền', '1/1/1990','0',N'Tiền Giang','0287652145');
+insert into NHANVIEN values ('NV03', N'Lê Vĩnh Phúc', '1/1/1994','1',N'Bến Tre','0234543223');
 
 insert into SACH values ('VH',N'Xã hội học văn hóa','KHXH','TG01',N'NXB Khoa học xã hội',2004,50);
 insert into SACH values ('DLKS',N'Giáo trình kinh tế du lịch','KHXH','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
@@ -193,7 +193,8 @@ insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '023
 insert into NHACC values('NMB', N'Nhã Nam Book' ,N'Hà Nội', '0287652145');
 insert into NHACC values('KDB', N'Kim Đồng Book' ,N'Hà Nội', '0287652145');
 
-
+insert into SINHVIEN values('SV001',N'Trần Văn Triều','1','XH','1/2/2000',N'Tiền Giang','0287652145');
+insert into SINHVIEN values('SV002',N'Nguyễn Thanh Mai','0','TN','2/1/2000',N'Bến Tre','0234543223');
 
 
 

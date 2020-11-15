@@ -148,6 +148,7 @@
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(261, 22);
             this.txtsdt.TabIndex = 1;
+            this.txtsdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsdt_KeyPress);
             // 
             // label7
             // 
@@ -211,7 +212,6 @@
             this.lvnhanvien.TabIndex = 4;
             this.lvnhanvien.UseCompatibleStateImageBehavior = false;
             this.lvnhanvien.View = System.Windows.Forms.View.Details;
-         //   this.lvnhanvien.SelectedIndexChanged += new System.EventHandler(this.lvnhanvien_SelectedIndexChanged);
             this.lvnhanvien.Click += new System.EventHandler(this.lvnhanvien_Click);
             // 
             // columnHeader1

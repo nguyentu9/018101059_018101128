@@ -50,17 +50,20 @@
     <Compile Include="BUS\NhaccBUS.cs" />
     <Compile Include="BUS\NhanvienBUS.cs" />
     <Compile Include="BUS\PhieunhapBUS.cs" />
+    <Compile Include="BUS\SinhvienBUS.cs" />
     <Compile Include="BUS\TacgiaBUS.cs" />
     <Compile Include="DAO\KetnoiCSDL.cs" />
     <Compile Include="DAO\KhoaDAO.cs" />
     <Compile Include="DAO\NhaccDAO.cs" />
     <Compile Include="DAO\NhanvienDAO.cs" />
     <Compile Include="DAO\PhieunhapDAO.cs" />
+    <Compile Include="DAO\SinhvienDAO.cs" />
     <Compile Include="DAO\TacgiaDAO.cs" />
     <Compile Include="DTO\KhoaDTO.cs" />
     <Compile Include="DTO\NhaccDTO.cs" />
     <Compile Include="DTO\NhanvienDTO.cs" />
     <Compile Include="DTO\PhieunhapDTO.cs" />
+    <Compile Include="DTO\SinhvienDTO.cs" />
     <Compile Include="DTO\TacgiaDTO.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>

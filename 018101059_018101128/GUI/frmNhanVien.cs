@@ -109,5 +109,16 @@ namespace _018101059_018101128.GUI
         {
             this.Close();
         }
+
+        private void txtsdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsNumber(e.KeyChar) & (Keys)e.KeyChar != Keys.Back)
+            {
+                e.Handled = true;
+                MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+
+        }
     }
 }
