@@ -15,7 +15,7 @@ namespace _018101059_018101128.DAO
         public static void Mokn()
         {
             try {
-                cnn = new SqlConnection(@"Data Source=DESKTOP-JTG95LM\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True");
+                cnn = new SqlConnection(@"Data Source=DESKTOP-P8MOIJI;Initial Catalog=QLTV;Integrated Security=True");
                 if (cnn.State == ConnectionState.Closed)
                     cnn.Open();
             }
@@ -33,7 +33,7 @@ namespace _018101059_018101128.DAO
         {
             Mokn();
             SqlCommand cd = new SqlCommand(s, cnn);
-           SqlDataReader dr = cd.ExecuteReader();
+            SqlDataReader dr = cd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
             Dongkn();

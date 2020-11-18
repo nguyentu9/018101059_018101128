@@ -55,7 +55,7 @@
             // danhSáchNhânViênToolStripMenuItem
             // 
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
-            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
             // 
             // frmMenu
@@ -67,6 +67,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

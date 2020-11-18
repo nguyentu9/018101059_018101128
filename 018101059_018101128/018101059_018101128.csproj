@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DangNhapBUS.cs" />
     <Compile Include="BUS\KhoaBUS.cs" />
     <Compile Include="BUS\LoaisachBUS.cs" />
     <Compile Include="BUS\NhaccBUS.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="BUS\PhieunhapBUS.cs" />
     <Compile Include="BUS\SinhvienBUS.cs" />
     <Compile Include="BUS\TacgiaBUS.cs" />
+    <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\KetnoiCSDL.cs" />
     <Compile Include="DAO\KhoaDAO.cs" />
     <Compile Include="DAO\LoaisachDAO.cs" />

@@ -21,5 +21,10 @@ namespace _018101059_018101128
         {
 
         }
+
+        private void frmSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace _018101059_018101128
 {
-    partial class Form1
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,7 @@
             // txttendangnhap
             // 
             this.txttendangnhap.Location = new System.Drawing.Point(126, 75);
+            this.txttendangnhap.MaxLength = 20;
             this.txttendangnhap.Name = "txttendangnhap";
             this.txttendangnhap.Size = new System.Drawing.Size(180, 20);
             this.txttendangnhap.TabIndex = 1;
@@ -69,22 +70,24 @@
             this.label3.Location = new System.Drawing.Point(36, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
             // txtmatkhau
             // 
             this.txtmatkhau.Location = new System.Drawing.Point(126, 116);
+            this.txtmatkhau.MaxLength = 20;
             this.txtmatkhau.Name = "txtmatkhau";
+            this.txtmatkhau.PasswordChar = '*';
             this.txtmatkhau.Size = new System.Drawing.Size(180, 20);
-            this.txtmatkhau.TabIndex = 1;
+            this.txtmatkhau.TabIndex = 3;
             // 
             // btndangnhap
             // 
             this.btndangnhap.Location = new System.Drawing.Point(30, 167);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(135, 41);
-            this.btndangnhap.TabIndex = 2;
+            this.btndangnhap.TabIndex = 4;
             this.btndangnhap.Text = "Đăng nhập";
             this.btndangnhap.UseVisualStyleBackColor = true;
             this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
@@ -94,14 +97,17 @@
             this.btnthoat.Location = new System.Drawing.Point(171, 167);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(135, 41);
-            this.btnthoat.TabIndex = 2;
+            this.btnthoat.TabIndex = 5;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
-            // Form1
+            // frmDangNhap
             // 
+            this.AcceptButton = this.btndangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnthoat;
             this.ClientSize = new System.Drawing.Size(369, 287);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btndangnhap);
@@ -110,8 +116,10 @@
             this.Controls.Add(this.txttendangnhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_DangNhap";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

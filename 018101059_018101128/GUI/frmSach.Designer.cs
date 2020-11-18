@@ -143,7 +143,7 @@
             // txtmasach
             // 
             this.txtmasach.Location = new System.Drawing.Point(139, 59);
-            this.txtmasach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmasach.Margin = new System.Windows.Forms.Padding(2);
             this.txtmasach.Name = "txtmasach";
             this.txtmasach.Size = new System.Drawing.Size(150, 20);
             this.txtmasach.TabIndex = 1;
@@ -151,7 +151,7 @@
             // txttensach
             // 
             this.txttensach.Location = new System.Drawing.Point(139, 102);
-            this.txttensach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttensach.Margin = new System.Windows.Forms.Padding(2);
             this.txttensach.Name = "txttensach";
             this.txttensach.Size = new System.Drawing.Size(150, 20);
             this.txttensach.TabIndex = 1;
@@ -159,7 +159,7 @@
             // txtnhaxuatban
             // 
             this.txtnhaxuatban.Location = new System.Drawing.Point(476, 61);
-            this.txtnhaxuatban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnhaxuatban.Margin = new System.Windows.Forms.Padding(2);
             this.txtnhaxuatban.Name = "txtnhaxuatban";
             this.txtnhaxuatban.Size = new System.Drawing.Size(151, 20);
             this.txtnhaxuatban.TabIndex = 1;
@@ -168,7 +168,7 @@
             // 
             this.dtpnamxuatban.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpnamxuatban.Location = new System.Drawing.Point(476, 119);
-            this.dtpnamxuatban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpnamxuatban.Margin = new System.Windows.Forms.Padding(2);
             this.dtpnamxuatban.Name = "dtpnamxuatban";
             this.dtpnamxuatban.Size = new System.Drawing.Size(151, 20);
             this.dtpnamxuatban.TabIndex = 2;
@@ -176,7 +176,7 @@
             // numsoluong
             // 
             this.numsoluong.Location = new System.Drawing.Point(476, 170);
-            this.numsoluong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numsoluong.Margin = new System.Windows.Forms.Padding(2);
             this.numsoluong.Name = "numsoluong";
             this.numsoluong.Size = new System.Drawing.Size(150, 20);
             this.numsoluong.TabIndex = 3;
@@ -195,7 +195,7 @@
             this.lvsach.GridLines = true;
             this.lvsach.HideSelection = false;
             this.lvsach.Location = new System.Drawing.Point(26, 228);
-            this.lvsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvsach.Margin = new System.Windows.Forms.Padding(2);
             this.lvsach.Name = "lvsach";
             this.lvsach.Size = new System.Drawing.Size(691, 100);
             this.lvsach.TabIndex = 4;
@@ -240,7 +240,7 @@
             // btnthem
             // 
             this.btnthem.Location = new System.Drawing.Point(59, 341);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(109, 47);
             this.btnthem.TabIndex = 5;
@@ -250,7 +250,7 @@
             // btnghi
             // 
             this.btnghi.Location = new System.Drawing.Point(190, 341);
-            this.btnghi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnghi.Margin = new System.Windows.Forms.Padding(2);
             this.btnghi.Name = "btnghi";
             this.btnghi.Size = new System.Drawing.Size(109, 47);
             this.btnghi.TabIndex = 5;
@@ -260,7 +260,7 @@
             // btnxoa
             // 
             this.btnxoa.Location = new System.Drawing.Point(318, 341);
-            this.btnxoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(109, 47);
             this.btnxoa.TabIndex = 5;
@@ -270,7 +270,7 @@
             // btncapnhat
             // 
             this.btncapnhat.Location = new System.Drawing.Point(448, 341);
-            this.btncapnhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncapnhat.Margin = new System.Windows.Forms.Padding(2);
             this.btncapnhat.Name = "btncapnhat";
             this.btncapnhat.Size = new System.Drawing.Size(109, 47);
             this.btncapnhat.TabIndex = 5;
@@ -280,7 +280,7 @@
             // btnthoat
             // 
             this.btnthoat.Location = new System.Drawing.Point(575, 341);
-            this.btnthoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnthoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(109, 47);
             this.btnthoat.TabIndex = 5;
@@ -329,9 +329,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSach";
             this.Text = "frmSach";
+            this.Load += new System.EventHandler(this.frmSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numsoluong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

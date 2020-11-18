@@ -133,9 +133,10 @@ create table PHIEUBOITHUONG (
 go
 
 create table TAIKHOAN (
-	MATAIKHOAN varchar(10) primary key(MATAIKHOAN),
-	TENTAIKHOAN varchar(10),
-	MATKHAU varchar(10)
+	MATAIKHOAN int primary key(MATAIKHOAN) identity,
+	TENTAIKHOAN varchar(20) unique,
+	MATKHAU varchar(20),
+	LOAITK varchar(10) NULL
 )
 
 
@@ -200,6 +201,9 @@ insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
+insert into TAIKHOAN(TENTAIKHOAN, MATKHAU, LOAITK) values ('admin', 'admin', 'admin'),
+												('toan', '12345', 'admin'),
+												('thanh', '12345', 'user');
 
 
 

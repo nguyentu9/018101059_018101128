@@ -10,9 +10,14 @@ code lần 2:
 	frmPhieuNhap
 	frmLoaiSach
 # Toàn
+lần 1:	
 	frmTacgia
 	frmNhaCungCap : (sửa lỗi)
 		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
+lần 2: (18/11/20)	
+	frmDangNhap :
+		*** Lưu ý: table TAIKHOAN trong csdl có chỉnh sửa -> cập nhật thay đổi sql rồi chạy
+
 
 
 

@@ -16,5 +16,10 @@ namespace _018101059_018101128.GUI
         {
             InitializeComponent();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
