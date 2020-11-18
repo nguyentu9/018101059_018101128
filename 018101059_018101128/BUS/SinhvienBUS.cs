@@ -15,7 +15,7 @@ namespace _018101059_018101128.BUS
         public static DataTable Thongtin_sv1()
         {
             DataTable dt = new DataTable();
-            dt = SinhvienDAO.Thongtin_SV();
+            dt = SinhvienDAO.Thongtin_SV1();
             return dt;
         }
         public static DataTable Thongtin_Khoa()

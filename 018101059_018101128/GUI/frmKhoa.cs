@@ -36,7 +36,7 @@ namespace _018101059_018101128.GUI
             }
 
         }
-
+        
         private void lvkhoa_Click(object sender, EventArgs e)
         {
             txtmakhoa.Text = lvkhoa.SelectedItems[0].SubItems[0].Text;

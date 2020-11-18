@@ -94,7 +94,7 @@ namespace _018101059_018101128.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

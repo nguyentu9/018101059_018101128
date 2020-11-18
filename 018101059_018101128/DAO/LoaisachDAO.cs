@@ -28,7 +28,7 @@ namespace _018101059_018101128.DAO
         public static DataTable TT_CT(string matl)
         {
             string s = "select MATL, TENTHELOAI, k.MAKHOA, TENKHOA " +
-                "from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA and MATL='"+matl+"'";
+                "from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA and MATL='" + matl + "'";
             DataTable dt = new DataTable();
             dt = KetnoiCSDL.ExcuteQuery(s);
             return dt;

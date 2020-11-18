@@ -20,19 +20,19 @@ namespace _018101059_018101128
             InitializeComponent();
         }
 
-       
+
         private void frmSinhVien_Load(object sender, EventArgs e)
         {
-            Load_dataGridView();
+            Load_DataGridview();
             Load_Cbb();
         }
-
-        public void Load_dataGridView()
+        public void Load_DataGridview()
         {
             DataTable dt = new DataTable();
             dt = SinhvienBUS.Thongtin_sv1();
             dataGridView1.DataSource = dt;
-         }
+        }
+
         public void Load_Cbb()
         {
             DataTable dt = new DataTable();
@@ -41,10 +41,10 @@ namespace _018101059_018101128
             cbbKhoa.DisplayMember = "TENKHOA";
             cbbKhoa.ValueMember = "MAKHOA";
         }
-       
+
         private void btnghi_Click(object sender, EventArgs e)
         {
-            
+
             SinhvienDTO sv = new SinhvienDTO();
             string ngay = String.Format("{0:MM/dd/yyyy}", dtpngaysinh.Value);
             string gt;
@@ -59,9 +59,9 @@ namespace _018101059_018101128
             sv.makhoa = cbbKhoa.SelectedValue.ToString();
             sv.sdt = txtsodienthoai.Text;
             SinhvienBUS.ThemSV(sv);
-            
-            Load_dataGridView();
-         
+            Load_DataGridview();
+
+
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -74,8 +74,8 @@ namespace _018101059_018101128
             txthoten.Text = "";
             txtdiachi.Text = "";
             txtsodienthoai.Text = "";
-           
-            
+
+
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
@@ -84,13 +84,13 @@ namespace _018101059_018101128
             sv.masv = txtmasinhvien.Text;
             sv.makhoa = cbbKhoa.Text;
             SinhvienBUS.XoaSV(sv);
-            Load_dataGridView();
+            Load_DataGridview();
         }
 
 
         private void btncapnhat_Click(object sender, EventArgs e)
         {
-           
+
             SinhvienDTO sv = new SinhvienDTO();
             string ngay = String.Format("{0:MM/dd/yyyy}", dtpngaysinh.Value);
             string gt;
@@ -105,8 +105,7 @@ namespace _018101059_018101128
             sv.makhoa = cbbKhoa.SelectedValue.ToString();
             sv.sdt = txtsodienthoai.Text;
             SinhvienBUS.CapnhatSV(sv);
-            
-            Load_dataGridView();
+            Load_DataGridview();
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -119,9 +118,9 @@ namespace _018101059_018101128
             if (!char.IsNumber(e.KeyChar) & (Keys)e.KeyChar != Keys.Back)
             {
                 e.Handled = true;
-                MessageBox.Show("Số điện thoại không hợp lệ","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
-           
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +135,7 @@ namespace _018101059_018101128
             cbbKhoa.Text = dataGridView1.Rows[e.RowIndex].Cells["TENKHOA"].FormattedValue.ToString();
             txtsodienthoai.Text = dataGridView1.Rows[e.RowIndex].Cells["SDT"].FormattedValue.ToString();
         }
+
     }
     }
 

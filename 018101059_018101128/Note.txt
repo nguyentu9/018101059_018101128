@@ -2,10 +2,10 @@
 # Thanh
 code lần 1:
 	frmKhoa
-	frmNhanVien
+	frmNhanVien (sửa lỗi)
 		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
 code lần 2:
-	frmSinhVien
+	frmSinhVien (sửa lỗi)
 		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
 	frmPhieuNhap
 	frmLoaiSach

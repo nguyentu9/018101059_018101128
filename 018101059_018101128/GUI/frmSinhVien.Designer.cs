@@ -128,7 +128,7 @@
             // txtmasinhvien
             // 
             this.txtmasinhvien.Enabled = false;
-            this.txtmasinhvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmasinhvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmasinhvien.Location = new System.Drawing.Point(151, 30);
             this.txtmasinhvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmasinhvien.Multiline = true;
@@ -138,7 +138,7 @@
             // 
             // txthoten
             // 
-            this.txthoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthoten.Location = new System.Drawing.Point(151, 83);
             this.txthoten.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txthoten.Multiline = true;
@@ -148,7 +148,7 @@
             // 
             // txtdiachi
             // 
-            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdiachi.Location = new System.Drawing.Point(527, 83);
             this.txtdiachi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdiachi.Multiline = true;
@@ -158,7 +158,7 @@
             // 
             // txtsodienthoai
             // 
-            this.txtsodienthoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsodienthoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsodienthoai.Location = new System.Drawing.Point(527, 142);
             this.txtsodienthoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsodienthoai.MaxLength = 10;
@@ -170,19 +170,19 @@
             // 
             // dtpngaysinh
             // 
-            this.dtpngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpngaysinh.Location = new System.Drawing.Point(151, 145);
             this.dtpngaysinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpngaysinh.Name = "dtpngaysinh";
-            this.dtpngaysinh.Size = new System.Drawing.Size(207, 27);
+            this.dtpngaysinh.Size = new System.Drawing.Size(207, 24);
             this.dtpngaysinh.TabIndex = 2;
             // 
             // btnthem
             // 
             this.btnthem.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(48, 318);
+            this.btnthem.Location = new System.Drawing.Point(58, 321);
             this.btnthem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(132, 58);
@@ -195,7 +195,7 @@
             // 
             this.btnghi.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnghi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnghi.Location = new System.Drawing.Point(199, 318);
+            this.btnghi.Location = new System.Drawing.Point(209, 321);
             this.btnghi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnghi.Name = "btnghi";
             this.btnghi.Size = new System.Drawing.Size(126, 58);
@@ -208,7 +208,7 @@
             // 
             this.btnxoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoa.Location = new System.Drawing.Point(350, 318);
+            this.btnxoa.Location = new System.Drawing.Point(360, 321);
             this.btnxoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(133, 58);
@@ -221,7 +221,7 @@
             // 
             this.btncapnhat.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btncapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncapnhat.Location = new System.Drawing.Point(510, 318);
+            this.btncapnhat.Location = new System.Drawing.Point(520, 321);
             this.btncapnhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncapnhat.Name = "btncapnhat";
             this.btncapnhat.Size = new System.Drawing.Size(127, 58);
@@ -234,7 +234,7 @@
             // 
             this.btnthoat.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthoat.Location = new System.Drawing.Point(659, 318);
+            this.btnthoat.Location = new System.Drawing.Point(669, 321);
             this.btnthoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(123, 58);
@@ -245,12 +245,12 @@
             // 
             // cbbKhoa
             // 
-            this.cbbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKhoa.FormattingEnabled = true;
             this.cbbKhoa.Location = new System.Drawing.Point(527, 31);
             this.cbbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(207, 24);
+            this.cbbKhoa.Size = new System.Drawing.Size(207, 26);
             this.cbbKhoa.TabIndex = 5;
             // 
             // groupBox1
@@ -270,10 +270,10 @@
             this.groupBox1.Controls.Add(this.txtdiachi);
             this.groupBox1.Controls.Add(this.dtpngaysinh);
             this.groupBox1.Controls.Add(this.txtsodienthoai);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(51, 61);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(48, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 230);
+            this.groupBox1.Size = new System.Drawing.Size(750, 230);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
@@ -321,7 +321,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(753, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 181);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -329,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 596);
+            this.ClientSize = new System.Drawing.Size(887, 596);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnthoat);

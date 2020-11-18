@@ -10,13 +10,15 @@ namespace _018101059_018101128.DAO
 {
     class SinhvienDAO
     {
-        public static DataTable Thongtin_SV()
+        
+        public static DataTable Thongtin_SV1()
         {
-            string s = "select MASV, HOTEN, NGAYSINH, DIACHI, GIOITINH, s.MAKHOA, TENKHOA, SDT  From SINHVIEN s, KHOA k WHERE s.MAKHOA=k.MAKHOA ";
+            string s = "select MASV,HOTEN,GIOITINH, NGAYSINH, DIACHI,SDT, k.MAKHOA, TENKHOA  From SINHVIEN s, KHOA k where s.MAKHOA=k.MAKHOA";
             DataTable dt = new DataTable();
             dt = KetnoiCSDL.ExcuteQuery(s);
             return dt;
         }
+     
         public static DataTable Thongtin_Khoa()
         {
             string s = "select * From KHOA";
