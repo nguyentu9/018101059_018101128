@@ -44,6 +44,7 @@
             this.cbbnv = new System.Windows.Forms.ComboBox();
             this.cbbPN = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 40);
+            this.label2.Location = new System.Drawing.Point(43, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 0;
@@ -200,7 +201,7 @@
             // 
             this.cbbPN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPN.FormattingEnabled = true;
-            this.cbbPN.Location = new System.Drawing.Point(315, 103);
+            this.cbbPN.Location = new System.Drawing.Point(358, 124);
             this.cbbPN.Name = "cbbPN";
             this.cbbPN.Size = new System.Drawing.Size(193, 28);
             this.cbbPN.TabIndex = 6;
@@ -224,6 +225,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết ";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(203, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Mã phiếu nhập";
+            // 
             // frmPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,6 +247,7 @@
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.btnghi);
             this.Controls.Add(this.btnthem);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPhieuNhap";
@@ -266,5 +278,6 @@
         private System.Windows.Forms.ComboBox cbbnv;
         private System.Windows.Forms.ComboBox cbbPN;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

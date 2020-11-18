@@ -20,44 +20,23 @@ namespace _018101059_018101128.GUI
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            Load_lvnhanvien();
+          
+            loadDatagridview();
         }
-        public void Load_lvnhanvien()
+       
+       public void loadDatagridview()
         {
-            lvnhanvien.Items.Clear();
             DataTable dt = new DataTable();
             dt = NhanvienBUS.Nhanvien();
-            int sonv = dt.Rows.Count;
-            string gt;
-            for (int i = 0; i < sonv; i++)
-            {
-                if (dt.Rows[i]["GioiTinh"].ToString() == "True")
-                    gt = "Nam";
-                else gt = "Nu";
-                lvnhanvien.Items.Add(dt.Rows[i]["MaNV"].ToString());
-                lvnhanvien.Items[i].SubItems.Add(dt.Rows[i]["HoTen"].ToString());
-                lvnhanvien.Items[i].SubItems.Add(dt.Rows[i]["NgaySinh"].ToString());
-                lvnhanvien.Items[i].SubItems.Add(gt);
-                lvnhanvien.Items[i].SubItems.Add(dt.Rows[i]["DiaChi"].ToString());
-                lvnhanvien.Items[i].SubItems.Add(dt.Rows[i]["SDT"].ToString());
-            }
+            dataGridNV.DataSource = dt;
         }
             
-        private void lvnhanvien_Click(object sender, EventArgs e)
-        {
-            txtmanv.Text = lvnhanvien.SelectedItems[0].SubItems[0].Text;
-            txthoten.Text= lvnhanvien.SelectedItems[0].SubItems[1].Text;
-            dtpngaysinh.Text = lvnhanvien.SelectedItems[0].SubItems[2].Text;
-            if (lvnhanvien.SelectedItems[0].SubItems[3].Text == "Nam")
-                radnam.Checked = true;
-            else radnu.Checked = true;
-            txtdiachi.Text = lvnhanvien.SelectedItems[0].SubItems[4].Text;
-            txtsdt.Text = lvnhanvien.SelectedItems[0].SubItems[5].Text;
-        }
+       
         private void btnThem_Click(object sender, EventArgs e)
         {
-            int sonv = lvnhanvien.Items.Count;
-            txtmanv.Text = "NV" + String.Format("{0:000}", sonv + 1);
+            int sonv = dataGridNV.Rows.Count;
+            txtmanv.Text = "NV" + String.Format("{0:00}", sonv + 1);
+            txtmanv.Enabled = false;
             txtdiachi.ResetText();
             txthoten.ResetText();
             txtsdt.ResetText();
@@ -76,7 +55,7 @@ namespace _018101059_018101128.GUI
             nv.diachi = txtdiachi.Text;
             nv.sdt = txtsdt.Text;
             NhanvienBUS.ThemNV(nv);
-            Load_lvnhanvien();
+            loadDatagridview();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -93,7 +72,7 @@ namespace _018101059_018101128.GUI
             nv.diachi = txtdiachi.Text;
             nv.sdt = txtsdt.Text;
             NhanvienBUS.CapnhatNV(nv);
-            Load_lvnhanvien();
+            loadDatagridview();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -101,8 +80,7 @@ namespace _018101059_018101128.GUI
             NhanvienDTO nv = new NhanvienDTO();
             nv.manv = txtmanv.Text;
             NhanvienBUS.XoaNV(nv);
-            lvnhanvien.Items.Clear();
-            Load_lvnhanvien();
+            loadDatagridview();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -119,6 +97,18 @@ namespace _018101059_018101128.GUI
                 MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
 
+        }
+
+        private void dataGridNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtmanv.Text = dataGridNV.Rows[e.RowIndex].Cells["MaNV"].Value.ToString();
+            txthoten.Text = dataGridNV.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
+            dtpngaysinh.Text = dataGridNV.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+            txtdiachi.Text = dataGridNV.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
+            txtsdt.Text = dataGridNV.Rows[e.RowIndex].Cells["SDT"].Value.ToString();
+            if (dataGridNV.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "True")
+                radnam.Checked = true;
+            else radnu.Checked = true;
         }
     }
 }

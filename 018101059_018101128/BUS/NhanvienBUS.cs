@@ -39,13 +39,17 @@ namespace _018101059_018101128.BUS
         }
         public static void XoaNV(NhanvienDTO nv)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
             {
-                NhanvienDAO.XoaNV(nv);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Xoá nhân viên thất bại");
+                try
+                {
+                    NhanvienDAO.XoaNV(nv);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xoá nhân viên thất bại");
+                }
             }
         }
 

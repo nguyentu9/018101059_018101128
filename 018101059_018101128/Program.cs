@@ -17,7 +17,7 @@ namespace _018101059_018101128
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmNhanVien());
         }
     }
 }

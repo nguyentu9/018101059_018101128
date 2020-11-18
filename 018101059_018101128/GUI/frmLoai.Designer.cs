@@ -82,7 +82,7 @@
             // 
             this.txtmaloai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmaloai.Location = new System.Drawing.Point(222, 39);
-            this.txtmaloai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmaloai.Margin = new System.Windows.Forms.Padding(4);
             this.txtmaloai.Name = "txtmaloai";
             this.txtmaloai.Size = new System.Drawing.Size(297, 27);
             this.txtmaloai.TabIndex = 1;
@@ -91,7 +91,7 @@
             // 
             this.txttenloai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttenloai.Location = new System.Drawing.Point(222, 98);
-            this.txttenloai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttenloai.Margin = new System.Windows.Forms.Padding(4);
             this.txttenloai.Name = "txttenloai";
             this.txttenloai.Size = new System.Drawing.Size(297, 27);
             this.txttenloai.TabIndex = 1;
@@ -100,7 +100,7 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(323, 307);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(124, 46);
             this.btnThem.TabIndex = 3;
@@ -112,7 +112,7 @@
             // 
             this.btnGhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGhi.Location = new System.Drawing.Point(455, 307);
-            this.btnGhi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhi.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhi.Name = "btnGhi";
             this.btnGhi.Size = new System.Drawing.Size(119, 46);
             this.btnGhi.TabIndex = 3;
@@ -124,7 +124,7 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(582, 307);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(120, 46);
             this.btnXoa.TabIndex = 3;
@@ -136,7 +136,7 @@
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Location = new System.Drawing.Point(710, 307);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(113, 46);
             this.btnCapNhat.TabIndex = 3;
@@ -148,7 +148,7 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(831, 307);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(108, 46);
             this.btnThoat.TabIndex = 3;
@@ -215,7 +215,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLoai";
             this.Text = "frmLoai";
             this.Load += new System.EventHandler(this.frmLoai_Load);
