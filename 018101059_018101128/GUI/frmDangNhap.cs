@@ -49,8 +49,11 @@ namespace _018101059_018101128
                 return;
             }
 
-            frmMenu frm = new frmMenu();
+            frmMenu frm = new frmMenu(this);
+            frm.taikhoan = txttendangnhap.Text;
+            this.Hide();
             frm.Show();
+            this.txttendangnhap.Text = this.txtmatkhau.Text = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)

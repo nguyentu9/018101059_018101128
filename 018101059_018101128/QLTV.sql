@@ -133,10 +133,12 @@ create table PHIEUBOITHUONG (
 go
 
 create table TAIKHOAN (
-	MATAIKHOAN int primary key(MATAIKHOAN) identity,
+	MATAIKHOAN varchar(10) primary key(MATAIKHOAN),
 	TENTAIKHOAN varchar(20) unique,
 	MATKHAU varchar(20),
 	LOAITK varchar(10) NULL
+
+	foreign key (MATAIKHOAN) references NHANVIEN(MANV)
 )
 
 

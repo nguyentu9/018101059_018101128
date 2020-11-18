@@ -16,8 +16,9 @@ lần 1:
 		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
 lần 2: (18/11/20)	
 	frmDangNhap :
-		*** Lưu ý: table TAIKHOAN trong csdl có chỉnh sửa -> cập nhật thay đổi sql rồi chạy
-
+		*** Lưu ý: table TAIKHOAN trong csdl có chỉnh sửa
+			-> cập nhật thay đổi sql rồi chạy
+	
 
 
 

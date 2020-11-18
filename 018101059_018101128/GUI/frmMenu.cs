@@ -16,10 +16,34 @@ namespace _018101059_018101128.GUI
         {
             InitializeComponent();
         }
-
+        public frmMenu(frmDangNhap frmDangNhap)
+        {
+            InitializeComponent();
+            _frmDangNhap = frmDangNhap;
+        }
+        frmDangNhap _frmDangNhap;
+        public string taikhoan { get; set; }
+        
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            txttaikhoan.Text = "Xin Chào " + taikhoan;
+        }
 
+        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _frmDangNhap.Show();
+            this.Close();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _frmDangNhap.Close();
         }
     }
 }
