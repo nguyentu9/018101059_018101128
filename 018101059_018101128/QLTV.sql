@@ -27,7 +27,7 @@ create table SACH(
 	MATL varchar(10), 
 	MATG varchar(10), 
 	NXB nvarchar(100), 
-	NAMSX datetime,
+	NAMSX int,
 	SOLUONG int
 	
 	foreign key (MATL) references LOAI(MATL),
@@ -190,6 +190,7 @@ insert into SACH values ('CNTP',N'Bảo quản lương thực','NNTP','TG11',N'N
 insert into SACH values ('NTTS',N'Phương pháp và kỹ thuật nuôi cá lồng biển','NNTP','TG12',N'NXB Nông nghiệp',2008,50);
 insert into SACH values ('TKT',N'Xác suất Thống kê ứng dụng trong Kinh tế Xã hội','KHTN','TG13',N'NXB Đại học Thăng Long',2010,45);
 insert into SACH values ('LL',N'Văn kiện Đảng toàn tập','LLCT','TG14',N'NXB Chính trị Quốc Gia',2006,50);
+
 
 insert into NHACC values('MLB', N'Minh Long Book' ,N'TP.Hồ Chí Minh', '0987654321');
 insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '0234543223');

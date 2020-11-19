@@ -3,6 +3,7 @@ using _018101059_018101128.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,17 @@ namespace _018101059_018101128.BUS
             {
                 LoaisachDAO.ThemSach(sach);
             }
-            catch (Exception)
+            catch (SqlException exception)
             {
-                MessageBox.Show("Không thể thêm sách");
+                if (exception.Number == 2627) // Cannot insert duplicate key row in object error
+                {
+                    // Handle duplicate key error
+                    MessageBox.Show("Mã sách đã tồn tại");
+                    return;
+                } else 
+                    MessageBox.Show("Không thể thêm sách");
             }
-        }
+        } // formSach
         public static void SuaSach(SachDTO sach)
         {
             try
@@ -33,7 +40,7 @@ namespace _018101059_018101128.BUS
             {
                 MessageBox.Show("Cập nhật thất bại");
             }
-        }
+        } // formSach
         public static void XoaSach(SachDTO sach)
         {
             if ((MessageBox.Show("Bạn có muốn xóa sách này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
@@ -45,7 +52,7 @@ namespace _018101059_018101128.BUS
                 {
                     MessageBox.Show("Xoá thất bại");
                 }
-        }
+        } // formSach
         public static DataTable Load_lv() // formSach
         {
             return LoaisachDAO.Load_lv();

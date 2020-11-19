@@ -39,7 +39,6 @@
             this.txtmasach = new System.Windows.Forms.TextBox();
             this.txttensach = new System.Windows.Forms.TextBox();
             this.txtnhaxuatban = new System.Windows.Forms.TextBox();
-            this.dtpnamxuatban = new System.Windows.Forms.DateTimePicker();
             this.numsoluong = new System.Windows.Forms.NumericUpDown();
             this.lvsach = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,7 +55,9 @@
             this.btnthoat = new System.Windows.Forms.Button();
             this.cbotheloai = new System.Windows.Forms.ComboBox();
             this.cbotacgia = new System.Windows.Forms.ComboBox();
+            this.numnamxuatban = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numsoluong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numnamxuatban)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -164,19 +165,15 @@
             this.txtnhaxuatban.Size = new System.Drawing.Size(151, 20);
             this.txtnhaxuatban.TabIndex = 9;
             // 
-            // dtpnamxuatban
-            // 
-            this.dtpnamxuatban.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpnamxuatban.Location = new System.Drawing.Point(476, 119);
-            this.dtpnamxuatban.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpnamxuatban.Name = "dtpnamxuatban";
-            this.dtpnamxuatban.Size = new System.Drawing.Size(151, 20);
-            this.dtpnamxuatban.TabIndex = 11;
-            // 
             // numsoluong
             // 
             this.numsoluong.Location = new System.Drawing.Point(476, 170);
             this.numsoluong.Margin = new System.Windows.Forms.Padding(2);
+            this.numsoluong.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numsoluong.Name = "numsoluong";
             this.numsoluong.Size = new System.Drawing.Size(150, 20);
             this.numsoluong.TabIndex = 13;
@@ -201,6 +198,7 @@
             this.lvsach.TabIndex = 4;
             this.lvsach.UseCompatibleStateImageBehavior = false;
             this.lvsach.View = System.Windows.Forms.View.Details;
+            this.lvsach.SelectedIndexChanged += new System.EventHandler(this.lvsach_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -308,11 +306,24 @@
             this.cbotacgia.Size = new System.Drawing.Size(150, 21);
             this.cbotacgia.TabIndex = 7;
             // 
+            // numnamxuatban
+            // 
+            this.numnamxuatban.Location = new System.Drawing.Point(476, 117);
+            this.numnamxuatban.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numnamxuatban.Name = "numnamxuatban";
+            this.numnamxuatban.Size = new System.Drawing.Size(151, 20);
+            this.numnamxuatban.TabIndex = 19;
+            // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 505);
+            this.Controls.Add(this.numnamxuatban);
             this.Controls.Add(this.cbotacgia);
             this.Controls.Add(this.cbotheloai);
             this.Controls.Add(this.btnthoat);
@@ -322,7 +333,6 @@
             this.Controls.Add(this.btnthem);
             this.Controls.Add(this.lvsach);
             this.Controls.Add(this.numsoluong);
-            this.Controls.Add(this.dtpnamxuatban);
             this.Controls.Add(this.txttensach);
             this.Controls.Add(this.txtnhaxuatban);
             this.Controls.Add(this.txtmasach);
@@ -340,6 +350,7 @@
             this.Text = "frmSach";
             this.Load += new System.EventHandler(this.frmSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numsoluong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numnamxuatban)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,7 +369,6 @@
         private System.Windows.Forms.TextBox txtmasach;
         private System.Windows.Forms.TextBox txttensach;
         private System.Windows.Forms.TextBox txtnhaxuatban;
-        private System.Windows.Forms.DateTimePicker dtpnamxuatban;
         private System.Windows.Forms.NumericUpDown numsoluong;
         private System.Windows.Forms.ListView lvsach;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -375,5 +385,6 @@
         private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.ComboBox cbotheloai;
         private System.Windows.Forms.ComboBox cbotacgia;
+        private System.Windows.Forms.NumericUpDown numnamxuatban;
     }
 }

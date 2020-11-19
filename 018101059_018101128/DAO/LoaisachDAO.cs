@@ -45,8 +45,6 @@ namespace _018101059_018101128.DAO
         }
 
 
-
-
         public static DataTable Loaisach()
         {
             string s = "select MATL, TENTHELOAI, k.MAKHOA, TENKHOA " +
