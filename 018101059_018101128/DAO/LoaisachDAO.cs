@@ -10,6 +10,21 @@ namespace _018101059_018101128.DAO
 {
     class LoaisachDAO
     {
+        public static DataTable Load_lv()
+        {
+            string s = "SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, " +
+                "dbo.SACH.SOLUONG FROM dbo.SACH INNER JOIN dbo.LOAI ON dbo.SACH.MATL = dbo.LOAI.MATL INNER JOIN dbo.TACGIA ON dbo.SACH.MATG = dbo.TACGIA.MATG";
+            DataTable dt = new DataTable();
+            dt = KetnoiCSDL.ExcuteQuery(s);
+            return dt;
+        }
+        public static DataTable Load_TTSach()
+        {
+            string s = "select * from LOAI";
+            DataTable dt = new DataTable();
+            dt = KetnoiCSDL.ExcuteQuery(s);
+            return dt;
+        }
         public static DataTable Loaisach()
         {
             string s = "select MATL, TENTHELOAI, k.MAKHOA, TENKHOA " +

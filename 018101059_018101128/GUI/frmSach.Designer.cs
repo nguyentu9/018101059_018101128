@@ -54,8 +54,8 @@
             this.btnxoa = new System.Windows.Forms.Button();
             this.btncapnhat = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbotheloai = new System.Windows.Forms.ComboBox();
+            this.cbotacgia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numsoluong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(258, 7);
+            this.label1.Location = new System.Drawing.Point(278, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 24);
@@ -93,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 156);
+            this.label4.Location = new System.Drawing.Point(65, 152);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
@@ -194,10 +194,10 @@
             this.lvsach.FullRowSelect = true;
             this.lvsach.GridLines = true;
             this.lvsach.HideSelection = false;
-            this.lvsach.Location = new System.Drawing.Point(26, 228);
+            this.lvsach.Location = new System.Drawing.Point(27, 240);
             this.lvsach.Margin = new System.Windows.Forms.Padding(2);
             this.lvsach.Name = "lvsach";
-            this.lvsach.Size = new System.Drawing.Size(691, 100);
+            this.lvsach.Size = new System.Drawing.Size(696, 153);
             this.lvsach.TabIndex = 4;
             this.lvsach.UseCompatibleStateImageBehavior = false;
             this.lvsach.View = System.Windows.Forms.View.Details;
@@ -239,7 +239,7 @@
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(59, 341);
+            this.btnthem.Location = new System.Drawing.Point(66, 415);
             this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(109, 47);
@@ -249,7 +249,7 @@
             // 
             // btnghi
             // 
-            this.btnghi.Location = new System.Drawing.Point(190, 341);
+            this.btnghi.Location = new System.Drawing.Point(197, 415);
             this.btnghi.Margin = new System.Windows.Forms.Padding(2);
             this.btnghi.Name = "btnghi";
             this.btnghi.Size = new System.Drawing.Size(109, 47);
@@ -259,7 +259,7 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(318, 341);
+            this.btnxoa.Location = new System.Drawing.Point(325, 415);
             this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(109, 47);
@@ -269,7 +269,7 @@
             // 
             // btncapnhat
             // 
-            this.btncapnhat.Location = new System.Drawing.Point(448, 341);
+            this.btncapnhat.Location = new System.Drawing.Point(455, 415);
             this.btncapnhat.Margin = new System.Windows.Forms.Padding(2);
             this.btncapnhat.Name = "btncapnhat";
             this.btncapnhat.Size = new System.Drawing.Size(109, 47);
@@ -279,7 +279,7 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(575, 341);
+            this.btnthoat.Location = new System.Drawing.Point(582, 415);
             this.btnthoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(109, 47);
@@ -287,29 +287,29 @@
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbotheloai
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbotheloai.FormattingEnabled = true;
+            this.cbotheloai.Location = new System.Drawing.Point(139, 149);
+            this.cbotheloai.Name = "cbotheloai";
+            this.cbotheloai.Size = new System.Drawing.Size(150, 21);
+            this.cbotheloai.TabIndex = 6;
             // 
-            // comboBox2
+            // cbotacgia
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(139, 192);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cbotacgia.FormattingEnabled = true;
+            this.cbotacgia.Location = new System.Drawing.Point(139, 192);
+            this.cbotacgia.Name = "cbotacgia";
+            this.cbotacgia.Size = new System.Drawing.Size(150, 21);
+            this.cbotacgia.TabIndex = 6;
             // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 412);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(771, 505);
+            this.Controls.Add(this.cbotacgia);
+            this.Controls.Add(this.cbotheloai);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btncapnhat);
             this.Controls.Add(this.btnxoa);
@@ -367,7 +367,7 @@
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btncapnhat;
         private System.Windows.Forms.Button btnthoat;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbotheloai;
+        private System.Windows.Forms.ComboBox cbotacgia;
     }
 }

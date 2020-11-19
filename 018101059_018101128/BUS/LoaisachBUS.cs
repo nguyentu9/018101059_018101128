@@ -12,6 +12,14 @@ namespace _018101059_018101128.BUS
 {
     class LoaisachBUS
     {
+        public static DataTable Load_lv()
+        {
+            return LoaisachDAO.Load_lv();
+        }
+        public static DataTable Load_TTSach()
+        {
+            return LoaisachDAO.Load_TTSach();
+        }
         public static DataTable Loaisach()
         {
             DataTable dt = new DataTable();

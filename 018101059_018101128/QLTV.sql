@@ -208,4 +208,10 @@ insert into TAIKHOAN(TENTAIKHOAN, MATKHAU, LOAITK) values ('admin', 'admin', 'ad
 												('thanh', '12345', 'user');
 
 
+select MATL, TENTHELOAI, k.MAKHOA, TENKHOA " +
+                "from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA
 
+
+-- Sử dụng view tìm câu lệnh cho sách
+SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, dbo.SACH.SOLUONG
+FROM  dbo.SACH INNER JOIN dbo.LOAI ON dbo.SACH.MATL = dbo.LOAI.MATL INNER JOIN dbo.TACGIA ON dbo.SACH.MATG = dbo.TACGIA.MATG
