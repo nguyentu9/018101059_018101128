@@ -12,11 +12,45 @@ namespace _018101059_018101128.BUS
 {
     class LoaisachBUS
     {
-        public static DataTable Load_lv()
+        public static void ThemSach(SachDTO sach)
+        {
+            try
+            {
+                LoaisachDAO.ThemSach(sach);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể thêm sách");
+            }
+        }
+        public static void SuaSach(SachDTO sach)
+        {
+            try
+            {
+                LoaisachDAO.SuaSach(sach);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cập nhật thất bại");
+            }
+        }
+        public static void XoaSach(SachDTO sach)
+        {
+            if ((MessageBox.Show("Bạn có muốn xóa sách này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                try
+                {
+                    LoaisachDAO.XoaSach(sach);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xoá thất bại");
+                }
+        }
+        public static DataTable Load_lv() // formSach
         {
             return LoaisachDAO.Load_lv();
         }
-        public static DataTable Load_TTSach()
+        public static DataTable Load_TTSach() // formSach
         {
             return LoaisachDAO.Load_TTSach();
         }

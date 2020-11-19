@@ -87,7 +87,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Tên sách";
             // 
             // label4
@@ -97,7 +97,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Tên thể loại";
             // 
             // label5
@@ -107,7 +107,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 0;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Tên tác giả";
             // 
             // label6
@@ -117,7 +117,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 0;
+            this.label6.TabIndex = 8;
             this.label6.Text = "Nhà xuất bản";
             // 
             // label7
@@ -127,7 +127,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 0;
+            this.label7.TabIndex = 10;
             this.label7.Text = "Năm xuất bản";
             // 
             // label8
@@ -137,7 +137,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 0;
+            this.label8.TabIndex = 12;
             this.label8.Text = "Số lượng";
             // 
             // txtmasach
@@ -154,7 +154,7 @@
             this.txttensach.Margin = new System.Windows.Forms.Padding(2);
             this.txttensach.Name = "txttensach";
             this.txttensach.Size = new System.Drawing.Size(150, 20);
-            this.txttensach.TabIndex = 1;
+            this.txttensach.TabIndex = 3;
             // 
             // txtnhaxuatban
             // 
@@ -162,7 +162,7 @@
             this.txtnhaxuatban.Margin = new System.Windows.Forms.Padding(2);
             this.txtnhaxuatban.Name = "txtnhaxuatban";
             this.txtnhaxuatban.Size = new System.Drawing.Size(151, 20);
-            this.txtnhaxuatban.TabIndex = 1;
+            this.txtnhaxuatban.TabIndex = 9;
             // 
             // dtpnamxuatban
             // 
@@ -171,7 +171,7 @@
             this.dtpnamxuatban.Margin = new System.Windows.Forms.Padding(2);
             this.dtpnamxuatban.Name = "dtpnamxuatban";
             this.dtpnamxuatban.Size = new System.Drawing.Size(151, 20);
-            this.dtpnamxuatban.TabIndex = 2;
+            this.dtpnamxuatban.TabIndex = 11;
             // 
             // numsoluong
             // 
@@ -179,7 +179,7 @@
             this.numsoluong.Margin = new System.Windows.Forms.Padding(2);
             this.numsoluong.Name = "numsoluong";
             this.numsoluong.Size = new System.Drawing.Size(150, 20);
-            this.numsoluong.TabIndex = 3;
+            this.numsoluong.TabIndex = 13;
             // 
             // lvsach
             // 
@@ -243,9 +243,10 @@
             this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(109, 47);
-            this.btnthem.TabIndex = 5;
+            this.btnthem.TabIndex = 14;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnghi
             // 
@@ -253,9 +254,10 @@
             this.btnghi.Margin = new System.Windows.Forms.Padding(2);
             this.btnghi.Name = "btnghi";
             this.btnghi.Size = new System.Drawing.Size(109, 47);
-            this.btnghi.TabIndex = 5;
+            this.btnghi.TabIndex = 15;
             this.btnghi.Text = "Ghi";
             this.btnghi.UseVisualStyleBackColor = true;
+            this.btnghi.Click += new System.EventHandler(this.btnghi_Click);
             // 
             // btnxoa
             // 
@@ -263,9 +265,10 @@
             this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(109, 47);
-            this.btnxoa.TabIndex = 5;
+            this.btnxoa.TabIndex = 16;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btncapnhat
             // 
@@ -273,9 +276,10 @@
             this.btncapnhat.Margin = new System.Windows.Forms.Padding(2);
             this.btncapnhat.Name = "btncapnhat";
             this.btncapnhat.Size = new System.Drawing.Size(109, 47);
-            this.btncapnhat.TabIndex = 5;
+            this.btncapnhat.TabIndex = 17;
             this.btncapnhat.Text = "Cập nhật";
             this.btncapnhat.UseVisualStyleBackColor = true;
+            this.btncapnhat.Click += new System.EventHandler(this.btncapnhat_Click);
             // 
             // btnthoat
             // 
@@ -283,9 +287,10 @@
             this.btnthoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(109, 47);
-            this.btnthoat.TabIndex = 5;
+            this.btnthoat.TabIndex = 18;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // cbotheloai
             // 
@@ -293,7 +298,7 @@
             this.cbotheloai.Location = new System.Drawing.Point(139, 149);
             this.cbotheloai.Name = "cbotheloai";
             this.cbotheloai.Size = new System.Drawing.Size(150, 21);
-            this.cbotheloai.TabIndex = 6;
+            this.cbotheloai.TabIndex = 5;
             // 
             // cbotacgia
             // 
@@ -301,7 +306,7 @@
             this.cbotacgia.Location = new System.Drawing.Point(139, 192);
             this.cbotacgia.Name = "cbotacgia";
             this.cbotacgia.Size = new System.Drawing.Size(150, 21);
-            this.cbotacgia.TabIndex = 6;
+            this.cbotacgia.TabIndex = 7;
             // 
             // frmSach
             // 
@@ -331,6 +336,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSach";
             this.Load += new System.EventHandler(this.frmSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numsoluong)).EndInit();

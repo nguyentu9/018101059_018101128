@@ -58,5 +58,32 @@ namespace _018101059_018101128
             cbotheloai.DisplayMember = "TENTHELOAI";
             cbotheloai.ValueMember = "MATL";
         }
+
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            txtmasach.Text = txttensach.Text = txtnhaxuatban.Text = "";
+            numsoluong.Value = 0;
+            cbotheloai.SelectedIndex = cbotacgia.SelectedIndex = 0;
+        }
+        // Note: dùng chung class với loaisach
+        private void btnghi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncapnhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

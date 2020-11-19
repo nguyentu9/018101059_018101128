@@ -68,6 +68,7 @@
     <Compile Include="DTO\NhaccDTO.cs" />
     <Compile Include="DTO\NhanvienDTO.cs" />
     <Compile Include="DTO\PhieunhapDTO.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
     <Compile Include="DTO\SinhvienDTO.cs" />
     <Compile Include="DTO\TacgiaDTO.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
