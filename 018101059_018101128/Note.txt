@@ -20,9 +20,10 @@ lần 2: (18/11/20)
 			-> cập nhật thay đổi sql rồi chạy
 	frmSach:
 		*** Lưu ý: frmSach dùng chung class BUS + DAO với frmLoaisach
+lần 3: (20/11/20)	
 	frmTinhTrang:
 	frmGiaiQuyet:
-
+	frmPhieuBoiThuong
 
 
 * ĐÃ HOÀN THÀNH:

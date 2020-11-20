@@ -119,7 +119,7 @@ create table GIAIQUYET (
 )
 go
 create table PHIEUBOITHUONG (
-	SOBT varchar(10) primary key(SOBT),
+	SOBT int primary key(SOBT) identity,
 	MATT int,
 	MAGQ int,
 	MANV varchar(10),
@@ -213,6 +213,8 @@ insert into GIAIQUYET values (N'Nộp phạt - 10k')
 insert into GIAIQUYET values (N'Nộp phạt - ứng với giá trị sách')
 insert into GIAIQUYET values (N'Bồi thường sách mới')
 
+insert into PHIEUBOITHUONG values(1, 1, 'NV01', 'SV001')
+
 
 insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
@@ -229,4 +231,18 @@ select MATL, TENTHELOAI, k.MAKHOA, TENKHOA from KHOA k, LOAI l where k.MAKHOA=l.
 SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, dbo.SACH.SOLUONG
 FROM  dbo.SACH INNER JOIN dbo.LOAI ON dbo.SACH.MATL = dbo.LOAI.MATL INNER JOIN dbo.TACGIA ON dbo.SACH.MATG = dbo.TACGIA.MATG
 
-select * from TAIKHOAN
+-- Sử dụng view tìm câu lệnh cho phiếu bồi thường
+SELECT        dbo.PHIEUBOITHUONG.SOBT, dbo.SINHVIEN.MASV, dbo.SINHVIEN.HOTEN AS TENSV, dbo.NHANVIEN.HOTEN AS TENNV, dbo.TINHTRANG.TENTT, dbo.GIAIQUYET.TENGQ
+FROM            dbo.GIAIQUYET INNER JOIN
+                         dbo.PHIEUBOITHUONG ON dbo.GIAIQUYET.MAGQ = dbo.PHIEUBOITHUONG.MAGQ INNER JOIN
+                         dbo.NHANVIEN ON dbo.PHIEUBOITHUONG.MANV = dbo.NHANVIEN.MANV INNER JOIN
+                         dbo.SINHVIEN ON dbo.PHIEUBOITHUONG.MASV = dbo.SINHVIEN.MASV INNER JOIN
+                         dbo.TINHTRANG ON dbo.PHIEUBOITHUONG.MATT = dbo.TINHTRANG.MATT
+
+select * from TINHTRANG
+select * from GIAIQUYET
+select MANV, HOTEN from NHANVIEN
+
+select * from GIAIQUYET
+select * from SINHVIEN
+select MASV, HOTEN from SINHVIEN
