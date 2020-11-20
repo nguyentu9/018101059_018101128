@@ -18,7 +18,9 @@ namespace _018101059_018101128
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmSinhVien());
-            Application.Run(new frmPhieuBoiThuong());
+            //Application.Run(new frmTinhTrang());
+            //Application.Run(new frmSinhVien());
+            Application.Run(new frmPhieuNhap());
         }
     }
 }

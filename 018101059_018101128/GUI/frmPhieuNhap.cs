@@ -32,25 +32,10 @@ namespace _018101059_018101128
         {
             DataTable dt = new DataTable();
             dt = PhieunhapDAO.CT_Phieunhap(cbbPN.SelectedValue.ToString());
-            txtphieunhap.Text = dt.Rows[0]["MAPN"].ToString();
-            dtpngaynhap.Text = dt.Rows[0]["NGAYNHAP"].ToString();
-            cbbncc.Text= dt.Rows[0]["TENNCC"].ToString();
-            cbbnv.Text = dt.Rows[0]["HOTEN"].ToString();
+            dataGridView1.DataSource = dt;
+            
         }
-       /* public void Loadlvphieunhap()
-        {
-            lvphieunhap.Items.Clear();
-            DataTable dt = new DataTable();
-            dt = PhieunhapDAO.Phieunhap();
-            int sopn = dt.Rows.Count;
-            for (int i = 0; i < sopn; i++)
-            {
-                lvphieunhap.Items.Add(dt.Rows[i]["MAPN"].ToString());
-                lvphieunhap.Items[i].SubItems.Add(dt.Rows[i]["NGAYNHAP"].ToString());
-                lvphieunhap.Items[i].SubItems.Add(dt.Rows[i]["MANCC"].ToString());
-                lvphieunhap.Items[i].SubItems.Add(dt.Rows[i]["HOTEN"].ToString());
-            }
-        }*/
+       
         public void LoadcbbNV()
         {
             DataTable dt = new DataTable();
@@ -123,6 +108,15 @@ namespace _018101059_018101128
         {
             if (cbbPN.SelectedValue.ToString() != "System.Data.DataRowView")
                 Chitiet_PN();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+            txtphieunhap.Text = dataGridView1.Rows[e.RowIndex].Cells["MaPN"].Value.ToString();
+            dtpngaynhap.Text = dataGridView1.Rows[e.RowIndex].Cells["NgayNhap"].Value.ToString();
+            cbbncc.Text =  dataGridView1.Rows[e.RowIndex].Cells["TENNCC"].Value.ToString();
+            cbbnv.Text = dataGridView1.Rows[e.RowIndex].Cells["HOTEN"].Value.ToString();
         }
     }
 }

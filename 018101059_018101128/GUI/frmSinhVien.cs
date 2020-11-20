@@ -120,7 +120,6 @@ namespace _018101059_018101128
                 e.Handled = true;
                 MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
