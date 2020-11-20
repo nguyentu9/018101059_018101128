@@ -142,65 +142,94 @@ create table TAIKHOAN (
 )
 
 
-insert into KHOA values ('TN',N'KHOA HỌC TỰ NHIÊN');
-insert into KHOA values ('XH', N'KHOA HỌC XÃ HỘI');
-
-
-insert into LOAI values ('KHXH', N'Khoa học xã hội','XH');
-insert into LOAI values ('SP', N'Sư phạm','XH');
-insert into LOAI values ('KTCN', N'Kỹ thuật công nghiệp','TN');
-insert into LOAI values ('KTXD', N'Kỹ thuật xây dựng','TN');
-insert into LOAI values ('KTL', N'Kinh tế-Luật','XH');
-insert into LOAI values ('CNTT',N'Công nghệ thông tin','TN');
-insert into LOAI values ('NNTP', N'Nông nghiệp-thực phẩm','TN');
-insert into LOAI values ('KHTN', N'Khoa học tự nhiên','TN');
-insert into LOAI values ('LLCT', N'Lý luận chính trị','XH');
-
-
-insert into TACGIA values ('TG01',N'Mai Văn Hai');
-insert into TACGIA values ('TG02',N'GS.TS Nguyễn Văn Đính');
-insert into TACGIA values ('TG03',N'TS.Lê Xuân Vinh');
-insert into TACGIA values ('TG04',N'GS.TS.Phạm Ngọc Khánh');
-insert into TACGIA values ('TG05',N'GS.TSKH.Nguyễn Minh Thảo');
-insert into TACGIA values ('TG06',N'Phí Trọng Hảo');
-insert into TACGIA values ('TG07',N'Trần Thế Sang');
-insert into TACGIA values ('TG08',N'TS.Trần Xuân Minh');
-insert into TACGIA values ('TG09',N'Đinh Vũ Nhân');
-insert into TACGIA values ('TG10',N'Nguyễn Nghĩa Thìn');
-insert into TACGIA values ('TG11',N'Mai Lê');
-insert into TACGIA values ('TG12',N'GS.TS.Nguyên Kim Độ');
-insert into TACGIA values ('TG13',N'Nguyẽn Thị Nhung');
-insert into TACGIA values ('TG14',N'Trần Tình');
-
 insert into NHANVIEN values ('NV01', N'Nguyễn Thị Hoa',' 1/1/1995','0',N'Vĩnh Long','0987654321');
 insert into NHANVIEN values ('NV02', N'Nguyễn Thị Thúy Hiền', '1/1/1990','0',N'Tiền Giang','0287652145');
 insert into NHANVIEN values ('NV03', N'Lê Vĩnh Phúc', '1/1/1994','1',N'Bến Tre','0234543223');
-
 insert into NHANVIEN values ('NV04', N'Tòn', '1/1/2000','1',N'Tìn Yang','0987654321');
-insert into NHANVIEN values ('NV05', N'Thanh', '1/1/2000','1',N'Tiền Giang','3515115131');
+insert into NHANVIEN values ('NV05', N'Thanh', '1/1/2000','1',N'American Tho','3515115131');
 
-insert into SACH values ('VH',N'Xã hội học văn hóa','KHXH','TG01',N'NXB Khoa học xã hội',2004,50);
-insert into SACH values ('DLKS',N'Giáo trình kinh tế du lịch','KHXH','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
-insert into SACH values ('TH',N'Giáo trình Logic và ứng dụng','SP','TG03',N'NXB Xây dựng',1999,70);
-insert into SACH values ('VL',N'Sức bền vật liệu','SP','TG04',N'NXB Xây dựng',1995,80);
-insert into SACH values ('HH',N'Các hợp chất dị vòng','SP','TG05',N'NXB Giáo dục',1996,40);
-insert into SACH values ('CK',N'Kỹ thuật nguội','KTCN','TG06',N'NXB Giáo dục',2001,50);
-insert into SACH values ('CDT',N'Thủy lực và khí nén ','KTCN','TG07',N'NXB khoa học và kỹ thuật',2002,60);
-insert into SACH values ('DDT',N'Điện tử công suất','KTCN','TG08',N'NXB Khoa học kỹ thuật',2004,70);
-insert into SACH values ('TT',N'Norton ghost chương trình sao chép ổ cứng','CNTT','TG09',N'NXB Thanh Niên',2009,100);
-insert into SACH values ('CNSH',N'Hệ thống học thực vật','NNTP','TG10',N'NXB Đại học quốc gia Hà Nội',2005,70);
-insert into SACH values ('CNTP',N'Bảo quản lương thực','NNTP','TG11',N'NXB Bách khoa Hà Nội',2007,60);
-insert into SACH values ('NTTS',N'Phương pháp và kỹ thuật nuôi cá lồng biển','NNTP','TG12',N'NXB Nông nghiệp',2008,50);
-insert into SACH values ('TKT',N'Xác suất Thống kê ứng dụng trong Kinh tế Xã hội','KHTN','TG13',N'NXB Đại học Thăng Long',2010,45);
-insert into SACH values ('LL',N'Văn kiện Đảng toàn tập','LLCT','TG14',N'NXB Chính trị Quốc Gia',2006,50);
+INSERT INTO KHOA VALUES('NN', N'Ngoại ngữ')
+INSERT INTO KHOA VALUES('CN', N'Công nghệ')
+INSERT INTO KHOA VALUES('SP', N'Sư phạm')
+INSERT INTO KHOA VALUES('KT', N'Kỹ thuật')
+INSERT INTO KHOA VALUES('XH', N'Xã hội')
+INSERT INTO KHOA VALUES('TN', N'Tự nhiên')
+INSERT INTO KHOA VALUES('NLN', N'Nông-Lâm-Nghiệp')
+INSERT INTO KHOA VALUES('KTQL', N'Kinh tế & Quản lý')
+INSERT INTO KHOA VALUES('NV', N'Nhân văn')
+
+
+insert into TACGIA values ('TG01','Tac gia 01');
+insert into TACGIA values ('TG02','Tac gia 02');
+insert into TACGIA values ('TG03','Tac gia 03');
+insert into TACGIA values ('TG04','Tac gia 04');
+insert into TACGIA values ('TG05','Tac gia 05');
+insert into TACGIA values ('TG06','Tac gia 06');
+insert into TACGIA values ('TG07','Tac gia 07');
+insert into TACGIA values ('TG08','Tac gia 08');
+insert into TACGIA values ('TG09','Tac gia 09');
+insert into TACGIA values ('TG13','Tac gia 13');
+insert into TACGIA values ('TG14','Tac gia 14');
+insert into TACGIA values ('TG15','Tac gia 15');
+insert into TACGIA values ('TG16','Tac gia 16');
+insert into TACGIA values ('TG17','Tac gia 17');
+insert into TACGIA values ('TG18','Tac gia 18');
+
+insert into LOAI values ('GDCT', N'Giáo dục mầm non','SP');
+insert into LOAI values ('KTXD', N'Kỹ thuật xây dựng','KT');
+insert into LOAI values ('KTCT', N'Kinh tế-Chính trị','XH');
+insert into LOAI values ('TCNH', N'Tài nhính-Ngân hàng','KTQL');
+insert into LOAI values ('QTKD', N'Quản trị kinh doanh','KTQL');
+insert into LOAI values ('CNTT', N'Công nghệ thông tin','CN');
+insert into LOAI values ('KHCT', N'Khoa học cây trồng','NLN');
+insert into LOAI values ('KHMT', N'Khoa học môi trường','TN');
+insert into LOAI values ('CTH',  N'Chính trị học','XH');
+insert into LOAI values ('KTLK', N'Kỹ thuật luyện kim','KT');
+insert into LOAI values ('VNH',  N'Việt Nam học','NV');
+insert into LOAI values ('BQCBNS',N'Bảo quản & chế biến nông sản','NLN');
+insert into LOAI values ('KTCDT',N'Kỹ thuật cơ điện tử','KT');
+insert into LOAI values ('CNKT', N'Công nghệ kiến trúc','CN');
+insert into LOAI values ('NTTS', N'Nuôi trồng thủy sản','NLN');
+insert into LOAI values ('KTDM', N'Kỹ thuật dệt may','KT');
+insert into LOAI values ('CNLK', N'Công nghệ luyện kim','CN');
+insert into LOAI values ('KTDT', N'Kỹ thuật điện tử','KT');
+insert into LOAI values ('DKTDH',N'Kỹ thuật Điều khiển & Tự động hóa','KT');
+
+insert into SACH values ('XHHCH',N'Xã hội học văn hóa','VNH','TG01',N'NXB Khoa học xã hội',2004,50);
+insert into SACH values ('KTDL',N'Giáo trình kinh tế du lịch','QTKD','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
+insert into SACH values ('LGUD',N'Giáo trình Logic và ứng dụng','CNKT','TG03',N'NXB Xây dựng',1999,70);
+insert into SACH values ('SBVL',N'Sức bền vật liệu','DKTDH','TG04',N'NXB Xây dựng',1995,80);
+insert into SACH values ('HCDV',N'Các hợp chất dị vòng','KTCDT','TG05',N'NXB Giáo dục',1996,40);
+insert into SACH values ('KTN',N'Kỹ thuật nguội','KTLK','TG06',N'NXB Giáo dục',2001,50);
+insert into SACH values ('TLKN',N'Thủy lực và khí nén ','KTCDT','TG07',N'NXB khoa học và kỹ thuật',2002,60);
+insert into SACH values ('DCN',N'Điện công nghiệp và điều khiển động cơ','DKTDH','TG08',N'NXB khoa học và kỹ thuật',2003,80);
+insert into SACH values ('DTCS',N'Điện tử công suất','KTDT','TG09',N'NXB Khoa học kỹ thuật',2004,70);
+insert into SACH values ('NRTG',N'Norton ghost chương trình sao chép ổ cứng','CNTT','TG13',N'NXB Thanh Niên',2009,100);
+insert into SACH values ('HTTV',N'Hệ thống học thực vật','KHCT','TG14',N'NXB Đại học quốc gia Hà Nội',2005,70);
+insert into SACH values ('BQLT',N'Bảo quản lương thực','BQCBNS','TG15',N'NXB Bách khoa Hà Nội',2007,60);
+insert into SACH values ('NCLB',N'Phương pháp và kỹ thuật nuôi cá lồng biển','NTTS','TG16',N'NXB Nông nghiệp',2008,50);
+insert into SACH values ('XSTK',N'Xác suất Thống kê ứng dụng trong Kinh tế Xã hội','QTKD','TG17',N'NXB Đại học Thăng Long',2010,45);
+insert into SACH values ('VKD',N'Văn kiện Đảng toàn tập','CTH','TG18',N'NXB Chính trị Quốc Gia',2006,50);
+
+insert into SINHVIEN values('SV001',N'Trần Văn Triều','1','XH','1/2/2000',N'Tiền Giang','0287652145');
+insert into SINHVIEN values('SV002',N'Nguyễn Thanh Mai','0','TN','2/1/2000',N'Bến Tre','0234543223');
+insert into SINHVIEN values('SV003',N'Nguyễn Thanh Tâm','1','CN','1/3/2000',N'Tiền Giang','0287652145');
+insert into SINHVIEN values('SV004',N'Nguyễn Thanh Mẫn','0','KT','2/5/2000',N'Long An','0234543223');
+insert into SINHVIEN values('SV005', N'Tòn','1','NV','1/1/2000',N'Tìn Yang','0987654321');
+insert into SINHVIEN values('SV006', N'Thanh','1','NLN', '1/1/2000',N'AmericanTho','113114115');
+
+insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', 'admin', 'admin', 'admin'),
+												('NV04', 'toan', '12345', 'admin'),
+												('NV05', 'thanh', '12345', 'user');
+
+insert into THETHUVIEN values ('001','SV001','1/1/2020','1/7/2020');
+insert into THETHUVIEN values ('002','SV002','1/2/2020','1/8/2020');
+insert into THETHUVIEN values ('003','SV003','1/3/2020','1/9/2020');
 
 insert into NHACC values('MLB', N'Minh Long Book' ,N'TP.Hồ Chí Minh', '0987654321');
 insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '0234543223');
 insert into NHACC values('NMB', N'Nhã Nam Book' ,N'Hà Nội', '0287652145');
 insert into NHACC values('KDB', N'Kim Đồng Book' ,N'Hà Nội', '0287652145');
-
-insert into SINHVIEN values('SV001',N'Trần Văn Triều','1','XH','1/2/2000',N'Tiền Giang','0287652145');
-insert into SINHVIEN values('SV002',N'Nguyễn Thanh Mai','0','TN','2/1/2000',N'Bến Tre','0234543223');
 
 insert into TINHTRANG values (N'Trả sách trễ hạn')
 insert into TINHTRANG values (N'Mất sách')
@@ -213,12 +242,17 @@ insert into GIAIQUYET values (N'Nộp phạt - 10k')
 insert into GIAIQUYET values (N'Nộp phạt - ứng với giá trị sách')
 insert into GIAIQUYET values (N'Bồi thường sách mới')
 
-insert into PHIEUBOITHUONG values(1, 1, 'NV01', 'SV001')
-
+insert into PHIEUBOITHUONG values( 1, 1, 'NV01', 'SV001')
 
 insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
+
+insert into PHIEUMUON values ('PM001','1/9/2020','8/9/2020','SV001','DCN','001','NV01'); 
+insert into PHIEUMUON values ('PM002','1/10/2020','8/10/2020','SV002','KTN','002','NV02'); 
+insert into PHIEUMUON values ('PM002','1/11/2020','8/11/2020','SV002','KTN','002','NV02');
+insert into PHIEUMUON values ('PM002','5/10/2020','11/10/2020','SV002','KTN','002','NV03');
+insert into PHIEUMUON values ('PM002','3/12/2020','10/12/2020','SV002','KTN','002','NV01');
 
 insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', 'admin', 'admin', 'admin'),
 												('NV04', 'toan', '12345', 'admin'),
