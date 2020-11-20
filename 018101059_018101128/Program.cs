@@ -18,7 +18,7 @@ namespace _018101059_018101128
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmSinhVien());
-            Application.Run(new frmSach());
+            Application.Run(new frmGiaiQuyet());
         }
     }
 }

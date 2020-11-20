@@ -108,20 +108,20 @@ create table PHIEUNHAP(
 go
 
 create table TINHTRANG (
-	MATT varchar(10) primary key(MATT),
-	TENTT nvarchar(40)
+	MATT int primary key(MATT) identity,
+	TENTT nvarchar(100) unique
 )
 go
 
 create table GIAIQUYET (
-	MAGQ varchar(10) primary key(MAGQ),
-	TENGQ nvarchar(40)
+	MAGQ int primary key(MAGQ) identity,
+	TENGQ nvarchar(100) unique
 )
 go
 create table PHIEUBOITHUONG (
 	SOBT varchar(10) primary key(SOBT),
-	MATT varchar(10),
-	MAGQ varchar(10),
+	MATT int,
+	MAGQ int,
 	MANV varchar(10),
 	MASV varchar(10)
 
@@ -176,6 +176,9 @@ insert into NHANVIEN values ('NV01', N'Nguyễn Thị Hoa',' 1/1/1995','0',N'Vĩ
 insert into NHANVIEN values ('NV02', N'Nguyễn Thị Thúy Hiền', '1/1/1990','0',N'Tiền Giang','0287652145');
 insert into NHANVIEN values ('NV03', N'Lê Vĩnh Phúc', '1/1/1994','1',N'Bến Tre','0234543223');
 
+insert into NHANVIEN values ('NV04', N'Tòn', '1/1/2000','1',N'Tìn Yang','0987654321');
+insert into NHANVIEN values ('NV05', N'Thanh', '1/1/2000','1',N'Tiền Giang','3515115131');
+
 insert into SACH values ('VH',N'Xã hội học văn hóa','KHXH','TG01',N'NXB Khoa học xã hội',2004,50);
 insert into SACH values ('DLKS',N'Giáo trình kinh tế du lịch','KHXH','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
 insert into SACH values ('TH',N'Giáo trình Logic và ứng dụng','SP','TG03',N'NXB Xây dựng',1999,70);
@@ -191,7 +194,6 @@ insert into SACH values ('NTTS',N'Phương pháp và kỹ thuật nuôi cá lồ
 insert into SACH values ('TKT',N'Xác suất Thống kê ứng dụng trong Kinh tế Xã hội','KHTN','TG13',N'NXB Đại học Thăng Long',2010,45);
 insert into SACH values ('LL',N'Văn kiện Đảng toàn tập','LLCT','TG14',N'NXB Chính trị Quốc Gia',2006,50);
 
-
 insert into NHACC values('MLB', N'Minh Long Book' ,N'TP.Hồ Chí Minh', '0987654321');
 insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '0234543223');
 insert into NHACC values('NMB', N'Nhã Nam Book' ,N'Hà Nội', '0287652145');
@@ -200,19 +202,31 @@ insert into NHACC values('KDB', N'Kim Đồng Book' ,N'Hà Nội', '0287652145')
 insert into SINHVIEN values('SV001',N'Trần Văn Triều','1','XH','1/2/2000',N'Tiền Giang','0287652145');
 insert into SINHVIEN values('SV002',N'Nguyễn Thanh Mai','0','TN','2/1/2000',N'Bến Tre','0234543223');
 
+insert into TINHTRANG values (N'Trả sách trễ hạn')
+insert into TINHTRANG values (N'Mất sách')
+insert into TINHTRANG values (N'Sách hư hỏng nhẹ')
+insert into TINHTRANG values (N'Sách hư hỏng nặng')
+
+insert into GIAIQUYET values (N'Nộp phạt-2k')
+insert into GIAIQUYET values (N'Nộp phạt-5k')
+insert into GIAIQUYET values (N'Nộp phạt - 10k')
+insert into GIAIQUYET values (N'Nộp phạt - ứng với giá trị sách')
+insert into GIAIQUYET values (N'Bồi thường sách mới')
+
+
 insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
-insert into TAIKHOAN(TENTAIKHOAN, MATKHAU, LOAITK) values ('admin', 'admin', 'admin'),
-												('toan', '12345', 'admin'),
-												('thanh', '12345', 'user');
+insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', 'admin', 'admin', 'admin'),
+												('NV04', 'toan', '12345', 'admin'),
+												('NV05', 'thanh', '12345', 'user');
 
-
-select MATL, TENTHELOAI, k.MAKHOA, TENKHOA " +
-                "from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA
+select MATL, TENTHELOAI, k.MAKHOA, TENKHOA from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA
 
 
 -- Sử dụng view tìm câu lệnh cho sách
 SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, dbo.SACH.SOLUONG
 FROM  dbo.SACH INNER JOIN dbo.LOAI ON dbo.SACH.MATL = dbo.LOAI.MATL INNER JOIN dbo.TACGIA ON dbo.SACH.MATG = dbo.TACGIA.MATG
+
+select * from TAIKHOAN

@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvphieugiaiquyet = new System.Windows.Forms.ListView();
+            this.lvgiaiquyet = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnthem = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 84);
+            this.label2.Location = new System.Drawing.Point(138, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
@@ -68,28 +68,29 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 136);
+            this.label3.Location = new System.Drawing.Point(138, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên giải quyết";
             // 
-            // lvphieugiaiquyet
+            // lvgiaiquyet
             // 
-            this.lvphieugiaiquyet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvgiaiquyet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.lvphieugiaiquyet.FullRowSelect = true;
-            this.lvphieugiaiquyet.GridLines = true;
-            this.lvphieugiaiquyet.HideSelection = false;
-            this.lvphieugiaiquyet.Location = new System.Drawing.Point(131, 177);
-            this.lvphieugiaiquyet.Margin = new System.Windows.Forms.Padding(2);
-            this.lvphieugiaiquyet.Name = "lvphieugiaiquyet";
-            this.lvphieugiaiquyet.Size = new System.Drawing.Size(324, 95);
-            this.lvphieugiaiquyet.TabIndex = 1;
-            this.lvphieugiaiquyet.UseCompatibleStateImageBehavior = false;
-            this.lvphieugiaiquyet.View = System.Windows.Forms.View.Details;
+            this.lvgiaiquyet.FullRowSelect = true;
+            this.lvgiaiquyet.GridLines = true;
+            this.lvgiaiquyet.HideSelection = false;
+            this.lvgiaiquyet.Location = new System.Drawing.Point(131, 141);
+            this.lvgiaiquyet.Margin = new System.Windows.Forms.Padding(2);
+            this.lvgiaiquyet.Name = "lvgiaiquyet";
+            this.lvgiaiquyet.Size = new System.Drawing.Size(324, 131);
+            this.lvgiaiquyet.TabIndex = 1;
+            this.lvgiaiquyet.UseCompatibleStateImageBehavior = false;
+            this.lvgiaiquyet.View = System.Windows.Forms.View.Details;
+            this.lvgiaiquyet.SelectedIndexChanged += new System.EventHandler(this.lvgiaiquyet_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -110,6 +111,7 @@
             this.btnthem.TabIndex = 2;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnxoa
             // 
@@ -120,6 +122,7 @@
             this.btnxoa.TabIndex = 2;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btncapnhat
             // 
@@ -130,6 +133,7 @@
             this.btncapnhat.TabIndex = 2;
             this.btncapnhat.Text = "Cập nhật";
             this.btncapnhat.UseVisualStyleBackColor = true;
+            this.btncapnhat.Click += new System.EventHandler(this.btncapnhat_Click);
             // 
             // button4
             // 
@@ -150,6 +154,7 @@
             this.btnthoat.TabIndex = 2;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btnghi
             // 
@@ -160,10 +165,11 @@
             this.btnghi.TabIndex = 2;
             this.btnghi.Text = "Ghi";
             this.btnghi.UseVisualStyleBackColor = true;
+            this.btnghi.Click += new System.EventHandler(this.btnghi_Click);
             // 
             // txtmagiaiquyet
             // 
-            this.txtmagiaiquyet.Location = new System.Drawing.Point(236, 84);
+            this.txtmagiaiquyet.Location = new System.Drawing.Point(245, 65);
             this.txtmagiaiquyet.Margin = new System.Windows.Forms.Padding(2);
             this.txtmagiaiquyet.Name = "txtmagiaiquyet";
             this.txtmagiaiquyet.Size = new System.Drawing.Size(170, 20);
@@ -171,7 +177,7 @@
             // 
             // txttengiaiquyet
             // 
-            this.txttengiaiquyet.Location = new System.Drawing.Point(236, 132);
+            this.txttengiaiquyet.Location = new System.Drawing.Point(245, 100);
             this.txttengiaiquyet.Margin = new System.Windows.Forms.Padding(2);
             this.txttengiaiquyet.Name = "txttengiaiquyet";
             this.txttengiaiquyet.Size = new System.Drawing.Size(170, 20);
@@ -190,13 +196,15 @@
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.btnghi);
             this.Controls.Add(this.btnthem);
-            this.Controls.Add(this.lvphieugiaiquyet);
+            this.Controls.Add(this.lvgiaiquyet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGiaiQuyet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGiaiQuyet";
+            this.Load += new System.EventHandler(this.frmGiaiQuyet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +215,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView lvphieugiaiquyet;
+        private System.Windows.Forms.ListView lvgiaiquyet;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnthem;
