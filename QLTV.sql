@@ -27,7 +27,7 @@ create table SACH(
 	MATL varchar(10), 
 	MATG varchar(10), 
 	NXB nvarchar(100), 
-	NAMSX int,
+	NAMSX datetime,
 	SOLUONG int
 	
 	foreign key (MATL) references LOAI(MATL),
@@ -47,7 +47,7 @@ create table SINHVIEN(
 )
 go
 create table THETHUVIEN(
-	MATHE int primary key (MATHE)  identity, 
+	MATHE varchar(10) primary key (MATHE), 
 	MASV varchar(10), 
 	NGAYCAP datetime, 
 	NGAYHETHAN datetime
@@ -65,12 +65,12 @@ create table NHANVIEN(
 )
 go
 create table PHIEUMUON(
-	SOPM int primary key (SOPM)  identity, 
+	SOPM varchar(10) primary key (SOPM), 
 	NGAYMUON datetime, 
 	NGAYTRA datetime, 
 	MASV varchar(10), 
 	MASH varchar(10), 
-	MATHE int, 
+	MATHE varchar(10), 
 	MANV varchar(10)
 
 	foreign key(MASV) references SINHVIEN(MASV),
@@ -80,7 +80,7 @@ create table PHIEUMUON(
 )
 go
 create table CTPM (
-	SOPM int primary key(SOPM, MASH) identity,
+	SOPM varchar(10) primary key(SOPM, MASH),
 	MASH varchar(10),
 	SOLUONG int
 	
@@ -94,6 +94,7 @@ create table NHACC (
 	TENNCC nvarchar(40),
 	DIACHI nvarchar(40),
 	SDT varchar(10)
+
 )
 go
 create table PHIEUNHAP(
@@ -140,7 +141,6 @@ create table TAIKHOAN (
 
 	foreign key (MATAIKHOAN) references NHANVIEN(MANV)
 )
-
 
 insert into NHANVIEN values ('NV01', N'Nguyễn Thị Hoa',' 1/1/1995','0',N'Vĩnh Long','0987654321');
 insert into NHANVIEN values ('NV02', N'Nguyễn Thị Thúy Hiền', '1/1/1990','0',N'Tiền Giang','0287652145');
@@ -195,7 +195,7 @@ insert into LOAI values ('CNLK', N'Công nghệ luyện kim','CN');
 insert into LOAI values ('KTDT', N'Kỹ thuật điện tử','KT');
 insert into LOAI values ('DKTDH',N'Kỹ thuật Điều khiển & Tự động hóa','KT');
 
-insert into SACH values ('XHHCH',N'Xã hội học văn hóa','VNH','TG01',N'NXB Khoa học xã hội',2004,50);
+insert into SACH values ('XHVH',N'Xã hội học văn hóa','VNH','TG01',N'NXB Khoa học xã hội',2004,50);
 insert into SACH values ('KTDL',N'Giáo trình kinh tế du lịch','QTKD','TG02',N'NXB Tổng hợp TP.HCM',2005,60);
 insert into SACH values ('LGUD',N'Giáo trình Logic và ứng dụng','CNKT','TG03',N'NXB Xây dựng',1999,70);
 insert into SACH values ('SBVL',N'Sức bền vật liệu','DKTDH','TG04',N'NXB Xây dựng',1995,80);
@@ -222,12 +222,12 @@ insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', '
 												('NV04', 'toan', '12345', 'admin'),
 												('NV05', 'thanh', '12345', 'user');
 
-insert into THETHUVIEN values ('SV001','1/1/2020','1/7/2020');
-insert into THETHUVIEN values ('SV002','1/2/2020','1/8/2020');
-insert into THETHUVIEN values ('SV003','1/3/2020','1/9/2020');
-insert into THETHUVIEN values ('SV004','1/6/2020','1/12/2020');
-insert into THETHUVIEN values ('SV005','1/4/2020','1/10/2020');
-insert into THETHUVIEN values ('SV006','1/5/2020','1/11/2020');
+insert into THETHUVIEN values ('001','SV001','1/1/2020','1/7/2020');
+insert into THETHUVIEN values ('002','SV002','1/2/2020','1/8/2020');
+insert into THETHUVIEN values ('003','SV003','1/3/2020','1/9/2020');
+insert into THETHUVIEN values ('004','SV004','1/6/2020','1/12/2020');
+insert into THETHUVIEN values ('005','SV005','1/4/2020','1/10/2020');
+insert into THETHUVIEN values ('006','SV006','1/5/2020','1/11/2020');
 
 insert into NHACC values('MLB', N'Minh Long Book' ,N'TP.Hồ Chí Minh', '0987654321');
 insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '0234543223');
@@ -247,27 +247,16 @@ insert into GIAIQUYET values (N'Bồi thường sách mới')
 
 insert into PHIEUBOITHUONG values( 1, 1, 'NV01', 'SV001')
 
-insert into CTPM values ('XHVH',50);
-insert into CTPM values ('VKD',50);
-insert into CTPM values ('BQLT',60);
-
 insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
-insert into PHIEUMUON values ('PM001','1/9/2020','8/9/2020','SV001','DCN',1,'NV01'); 
-insert into PHIEUMUON values ('PM002','1/10/2020','8/10/2020','SV002','KTN',2,'NV02'); 
-insert into PHIEUMUON values ('PM003','1/11/2020','8/11/2020','SV003','VKD',3,'NV02');
-insert into PHIEUMUON values ('PM004','5/10/2020','11/10/2020','SV004','HTTV',4,'NV03');
-insert into PHIEUMUON values ('PM005','3/12/2020','10/12/2020','SV005','SBVL',5,'NV01');
-insert into PHIEUMUON values ('PM006','5/12/2020','11/12/2020','SV006','BQLT',6,'NV03');
-
-insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', 'admin', 'admin', 'admin'),
-												('NV04', 'toan', '12345', 'admin'),
-												('NV05', 'thanh', '12345', 'user');
-
-select MATL, TENTHELOAI, k.MAKHOA, TENKHOA from KHOA k, LOAI l where k.MAKHOA=l.MAKHOA
-
+insert into PHIEUMUON values ('PM001','1/9/2020','8/9/2020','SV001','DCN','001','NV01'); 
+insert into PHIEUMUON values ('PM002','1/10/2020','8/10/2020','SV002','KTN','002','NV02'); 
+insert into PHIEUMUON values ('PM003','1/11/2020','8/11/2020','SV003','VKD','003','NV02');
+insert into PHIEUMUON values ('PM004','5/10/2020','11/10/2020','SV004','HTTV','004','NV03');
+insert into PHIEUMUON values ('PM005','3/12/2020','10/12/2020','SV005','SBVL','005','NV01');
+insert into PHIEUMUON values ('PM006','5/12/2020','11/12/2020','SV006','BQLT','006','NV03');
 
 -- Sử dụng view tìm câu lệnh cho sách
 SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, dbo.SACH.SOLUONG
@@ -280,11 +269,3 @@ FROM            dbo.GIAIQUYET INNER JOIN
                          dbo.NHANVIEN ON dbo.PHIEUBOITHUONG.MANV = dbo.NHANVIEN.MANV INNER JOIN
                          dbo.SINHVIEN ON dbo.PHIEUBOITHUONG.MASV = dbo.SINHVIEN.MASV INNER JOIN
                          dbo.TINHTRANG ON dbo.PHIEUBOITHUONG.MATT = dbo.TINHTRANG.MATT
-
-select * from TINHTRANG
-select * from GIAIQUYET
-select MANV, HOTEN from NHANVIEN
-
-select * from GIAIQUYET
-select * from SINHVIEN
-select MASV, HOTEN from SINHVIEN

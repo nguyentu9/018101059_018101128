@@ -9,8 +9,11 @@ code lần 2:
 		1/ txtSDT cần hàm check đầu vào chỉ cho nhập số
 	frmPhieuNhap
 	frmLoaiSach
-code lần 3:
+code lần 3:(21/11/2020)
 *** Lưu ý: chỉnh sửa CSDL cập nhật rồi chạy
+	frmPhieuMuon.
+	frmChiTietPhieuMuon.
+	frmTheThuVien
 
 # Toàn
 lần 1:	

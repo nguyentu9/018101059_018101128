@@ -20,7 +20,12 @@ namespace _018101059_018101128
             //Application.Run(new frmSinhVien());
             //Application.Run(new frmTinhTrang());
             //Application.Run(new frmSinhVien());
-            Application.Run(new frmPhieuNhap());
+            //Application.Run(new frmPhieuNhap());
+            //Application.Run(new frmPhieuBoiThuong());
+            //Application.Run(new frmPhieuMuon());
+            //Application.Run(new frmTheThuVien());
+            Application.Run(new frmChiTietPhieuMuon());
+
         }
     }
 }
