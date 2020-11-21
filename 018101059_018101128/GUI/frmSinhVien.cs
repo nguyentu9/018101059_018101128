@@ -135,6 +135,13 @@ namespace _018101059_018101128
             txtsodienthoai.Text = dataGridView1.Rows[e.RowIndex].Cells["SDT"].FormattedValue.ToString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SinhvienDAO.MAKHOA=cbbKhoa.SelectedValue.ToString();
+            CrystalReportSinhvien crs = new CrystalReportSinhvien();
+            crs.Show();
+       
+        }
     }
     }
 

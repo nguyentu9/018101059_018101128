@@ -47,7 +47,7 @@ create table SINHVIEN(
 )
 go
 create table THETHUVIEN(
-	MATHE varchar(10) primary key (MATHE), 
+	MATHE int primary key (MATHE) identity, 
 	MASV varchar(10), 
 	NGAYCAP datetime, 
 	NGAYHETHAN datetime
@@ -65,12 +65,12 @@ create table NHANVIEN(
 )
 go
 create table PHIEUMUON(
-	SOPM varchar(10) primary key (SOPM), 
+	SOPM int primary key (SOPM) identity, 
 	NGAYMUON datetime, 
 	NGAYTRA datetime, 
 	MASV varchar(10), 
 	MASH varchar(10), 
-	MATHE varchar(10), 
+	MATHE int, 
 	MANV varchar(10)
 
 	foreign key(MASV) references SINHVIEN(MASV),
@@ -80,7 +80,7 @@ create table PHIEUMUON(
 )
 go
 create table CTPM (
-	SOPM varchar(10) primary key(SOPM, MASH),
+	SOPM int primary key(SOPM, MASH) identity,
 	MASH varchar(10),
 	SOLUONG int
 	
@@ -222,12 +222,12 @@ insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', '
 												('NV04', 'toan', '12345', 'admin'),
 												('NV05', 'thanh', '12345', 'user');
 
-insert into THETHUVIEN values ('001','SV001','1/1/2020','1/7/2020');
-insert into THETHUVIEN values ('002','SV002','1/2/2020','1/8/2020');
-insert into THETHUVIEN values ('003','SV003','1/3/2020','1/9/2020');
-insert into THETHUVIEN values ('004','SV004','1/6/2020','1/12/2020');
-insert into THETHUVIEN values ('005','SV005','1/4/2020','1/10/2020');
-insert into THETHUVIEN values ('006','SV006','1/5/2020','1/11/2020');
+insert into THETHUVIEN values ('SV001','1/1/2020','1/7/2020');
+insert into THETHUVIEN values ('SV002','1/2/2020','1/8/2020');
+insert into THETHUVIEN values ('SV003','1/3/2020','1/9/2020');
+insert into THETHUVIEN values ('SV004','1/6/2020','1/12/2020');
+insert into THETHUVIEN values ('SV005','1/4/2020','1/10/2020');
+insert into THETHUVIEN values ('SV006','1/5/2020','1/11/2020');
 
 insert into NHACC values('MLB', N'Minh Long Book' ,N'TP.Hồ Chí Minh', '0987654321');
 insert into NHACC values('DTB', N'Định tị Book' ,N'TP.Hồ Chí Minh', '0234543223');
@@ -246,17 +246,22 @@ insert into GIAIQUYET values (N'Nộp phạt - ứng với giá trị sách')
 insert into GIAIQUYET values (N'Bồi thường sách mới')
 
 insert into PHIEUBOITHUONG values( 1, 1, 'NV01', 'SV001')
+insert into PHIEUBOITHUONG values( 1, 2, 'NV01', 'SV001')
 
 insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
-insert into PHIEUMUON values ('PM001','1/9/2020','8/9/2020','SV001','DCN','001','NV01'); 
-insert into PHIEUMUON values ('PM002','1/10/2020','8/10/2020','SV002','KTN','002','NV02'); 
-insert into PHIEUMUON values ('PM003','1/11/2020','8/11/2020','SV003','VKD','003','NV02');
-insert into PHIEUMUON values ('PM004','5/10/2020','11/10/2020','SV004','HTTV','004','NV03');
-insert into PHIEUMUON values ('PM005','3/12/2020','10/12/2020','SV005','SBVL','005','NV01');
-insert into PHIEUMUON values ('PM006','5/12/2020','11/12/2020','SV006','BQLT','006','NV03');
+insert into CTPM values ('XHVH',50);
+insert into CTPM values ('VKD',50);
+insert into CTPM values ('BQLT',60);
+
+insert into PHIEUMUON values ('1/9/2020','8/9/2020','SV001','DCN',1,'NV01'); 
+insert into PHIEUMUON values ('1/10/2020','8/10/2020','SV002','KTN',2,'NV02'); 
+insert into PHIEUMUON values ('1/11/2020','8/11/2020','SV003','VKD',3,'NV02');
+insert into PHIEUMUON values ('5/10/2020','11/10/2020','SV004','HTTV',4,'NV03');
+insert into PHIEUMUON values ('3/12/2020','10/12/2020','SV005','SBVL',5,'NV01');
+insert into PHIEUMUON values ('5/12/2020','11/12/2020','SV006','BQLT',6,'NV03');
 
 -- Sử dụng view tìm câu lệnh cho sách
 SELECT dbo.SACH.MASH, dbo.SACH.TENSACH, dbo.LOAI.TENTHELOAI, dbo.TACGIA.TENTACGIA, dbo.SACH.NXB, dbo.SACH.NAMSX, dbo.SACH.SOLUONG

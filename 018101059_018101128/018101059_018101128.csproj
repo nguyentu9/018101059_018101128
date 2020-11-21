@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +67,18 @@
     <Compile Include="BUS\TacgiaBUS.cs" />
     <Compile Include="BUS\ThethuvienBUS.cs" />
     <Compile Include="BUS\TinhTrangBUS.cs" />
+    <Compile Include="CrystalReportSinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReportSinhvien.Designer.cs">
+      <DependentUpon>CrystalReportSinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReportSV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DAO\BoiThuongDAO.cs" />
     <Compile Include="DAO\CTPMDAO.cs" />
     <Compile Include="DAO\DangNhapDAO.cs" />
@@ -75,6 +94,11 @@
     <Compile Include="DAO\TacgiaDAO.cs" />
     <Compile Include="DAO\ThethuvienDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DatasetSinhvien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetSinhvien.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\BoiThuongDTO.cs" />
     <Compile Include="DTO\CTPMDTO.cs" />
     <Compile Include="DTO\GiaiQuyetDTO.cs" />
@@ -89,6 +113,12 @@
     <Compile Include="DTO\TacgiaDTO.cs" />
     <Compile Include="DTO\ThethuvienDTO.cs" />
     <Compile Include="DTO\TinhTrangDTO.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +217,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReportSinhvien.resx">
+      <DependentUpon>CrystalReportSinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportSV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmChiTietPhieuMuon.resx">
       <DependentUpon>frmChiTietPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +285,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="018101059_018101128 %282%29.docx" />
+    <None Include="DatasetSinhvien.xsc">
+      <DependentUpon>DatasetSinhvien.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetSinhvien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetSinhvien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetSinhvien.xss">
+      <DependentUpon>DatasetSinhvien.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -261,6 +312,9 @@
   <ItemGroup>
     <Content Include="Note.txt" />
     <Content Include="QLTV.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

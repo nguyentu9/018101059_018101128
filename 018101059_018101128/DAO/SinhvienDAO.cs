@@ -42,5 +42,20 @@ namespace _018101059_018101128.DAO
             string s = "delete From SINHVIEN where MASV='" + sv.masv + "'";
             KetnoiCSDL.ExcuteNonQuery(s);
         }
+
+
+        public static string MAKHOA;
+        public static string tenkhoa
+        {
+            get { return MAKHOA; }
+            set { MAKHOA = value; }
+        }
+        public static DataTable Thongtin_SV1(string makhoa)
+        {
+            string s = "select MASV,HOTEN,GIOITINH, NGAYSINH, DIACHI,SDT, k.MAKHOA, TENKHOA  From SINHVIEN s, KHOA k where s.MAKHOA=k.MAKHOA and k.MAKHOA='" + makhoa + "'";
+            DataTable dt = new DataTable();
+            dt = KetnoiCSDL.ExcuteQuery(s);
+            return dt;
+        }
     }
 }
