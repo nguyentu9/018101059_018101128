@@ -33,7 +33,7 @@ create table SACH(
 	MATL varchar(10), 
 	MATG varchar(10), 
 	NXB nvarchar(100), 
-	NAMSX datetime,
+	NAMSX int,
 	SOLUONG int
 	
 	foreign key (MATL) references LOAI(MATL),
@@ -270,9 +270,9 @@ insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
-insert into CTPM values ('XHVH',50);
-insert into CTPM values ('VKD',50);
-insert into CTPM values ('BQLT',60);
+--insert into CTPM values ('XHVH',50);
+--insert into CTPM values ('VKD',50);
+--insert into CTPM values ('BQLT',60);
 
 insert into PHIEUMUON values ('1/9/2020','8/9/2020','SV001','DCN',1,'NV01'); 
 insert into PHIEUMUON values ('1/10/2020','8/10/2020','SV002','KTN',2,'NV02'); 
