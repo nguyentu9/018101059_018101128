@@ -45,10 +45,9 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(649, 327);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Location = new System.Drawing.Point(487, 266);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(145, 58);
+            this.btnThoat.Size = new System.Drawing.Size(109, 47);
             this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -56,10 +55,9 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(496, 327);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapNhat.Location = new System.Drawing.Point(372, 266);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(145, 58);
+            this.btnCapNhat.Size = new System.Drawing.Size(109, 47);
             this.btnCapNhat.TabIndex = 16;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
@@ -67,10 +65,9 @@
             // 
             // btnGhi
             // 
-            this.btnGhi.Location = new System.Drawing.Point(189, 327);
-            this.btnGhi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhi.Location = new System.Drawing.Point(142, 266);
             this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(145, 58);
+            this.btnGhi.Size = new System.Drawing.Size(109, 47);
             this.btnGhi.TabIndex = 17;
             this.btnGhi.Text = "Ghi";
             this.btnGhi.UseVisualStyleBackColor = true;
@@ -78,10 +75,9 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(343, 327);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Location = new System.Drawing.Point(257, 266);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(145, 58);
+            this.btnXoa.Size = new System.Drawing.Size(109, 47);
             this.btnXoa.TabIndex = 18;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -89,10 +85,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(36, 327);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Location = new System.Drawing.Point(27, 266);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(145, 58);
+            this.btnThem.Size = new System.Drawing.Size(109, 47);
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -106,10 +101,9 @@
             this.lvkhoa.FullRowSelect = true;
             this.lvkhoa.GridLines = true;
             this.lvkhoa.HideSelection = false;
-            this.lvkhoa.Location = new System.Drawing.Point(206, 187);
-            this.lvkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvkhoa.Location = new System.Drawing.Point(27, 152);
             this.lvkhoa.Name = "lvkhoa";
-            this.lvkhoa.Size = new System.Drawing.Size(483, 116);
+            this.lvkhoa.Size = new System.Drawing.Size(569, 95);
             this.lvkhoa.TabIndex = 24;
             this.lvkhoa.UseCompatibleStateImageBehavior = false;
             this.lvkhoa.View = System.Windows.Forms.View.Details;
@@ -118,7 +112,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã Khoa";
-            this.columnHeader1.Width = 226;
+            this.columnHeader1.Width = 196;
             // 
             // columnHeader2
             // 
@@ -127,37 +121,33 @@
             // 
             // txttenkhoa
             // 
-            this.txttenkhoa.Location = new System.Drawing.Point(374, 80);
-            this.txttenkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttenkhoa.Location = new System.Drawing.Point(291, 100);
             this.txttenkhoa.Name = "txttenkhoa";
-            this.txttenkhoa.Size = new System.Drawing.Size(223, 22);
+            this.txttenkhoa.Size = new System.Drawing.Size(168, 20);
             this.txttenkhoa.TabIndex = 22;
             // 
             // txtmakhoa
             // 
-            this.txtmakhoa.Location = new System.Drawing.Point(374, 139);
-            this.txtmakhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmakhoa.Location = new System.Drawing.Point(291, 61);
             this.txtmakhoa.Name = "txtmakhoa";
-            this.txtmakhoa.Size = new System.Drawing.Size(223, 22);
+            this.txtmakhoa.Size = new System.Drawing.Size(168, 20);
             this.txtmakhoa.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(253, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(197, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 17);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Tên Khoa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 139);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(201, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Mã Khoa";
             // 
@@ -165,18 +155,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(383, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(237, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 26);
+            this.label1.Size = new System.Drawing.Size(157, 22);
             this.label1.TabIndex = 25;
             this.label1.Text = "QUẢN LÝ KHOA";
             // 
             // frmKhoa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 454);
+            this.ClientSize = new System.Drawing.Size(656, 369);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvkhoa);
             this.Controls.Add(this.txttenkhoa);
@@ -188,7 +177,6 @@
             this.Controls.Add(this.btnGhi);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmKhoa";
             this.Text = "frmKhoa";
             this.Load += new System.EventHandler(this.frmKhoa_Load);
