@@ -57,7 +57,6 @@
             this.cbbsach = new System.Windows.Forms.ComboBox();
             this.cbbsinhvien = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(386, 93);
+            this.label3.Location = new System.Drawing.Point(523, 96);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 17);
@@ -98,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(386, 141);
+            this.label4.Location = new System.Drawing.Point(523, 144);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 17);
@@ -131,7 +130,7 @@
             // 
             this.dtpngaytra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngaytra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpngaytra.Location = new System.Drawing.Point(495, 136);
+            this.dtpngaytra.Location = new System.Drawing.Point(632, 139);
             this.dtpngaytra.Margin = new System.Windows.Forms.Padding(2);
             this.dtpngaytra.Name = "dtpngaytra";
             this.dtpngaytra.Size = new System.Drawing.Size(197, 23);
@@ -162,12 +161,12 @@
             // 
             this.lvphieumuon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader6,
+            this.columnHeader2,
+            this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader7,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader6,
+            this.columnHeader7});
             this.lvphieumuon.FullRowSelect = true;
             this.lvphieumuon.GridLines = true;
             this.lvphieumuon.HideSelection = false;
@@ -274,7 +273,7 @@
             // 
             this.dtpngaymuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngaymuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpngaymuon.Location = new System.Drawing.Point(495, 87);
+            this.dtpngaymuon.Location = new System.Drawing.Point(632, 90);
             this.dtpngaymuon.Margin = new System.Windows.Forms.Padding(2);
             this.dtpngaymuon.Name = "dtpngaymuon";
             this.dtpngaymuon.Size = new System.Drawing.Size(197, 23);
@@ -285,7 +284,7 @@
             // 
             this.cbbnhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbnhanvien.FormattingEnabled = true;
-            this.cbbnhanvien.Location = new System.Drawing.Point(495, 38);
+            this.cbbnhanvien.Location = new System.Drawing.Point(632, 41);
             this.cbbnhanvien.Name = "cbbnhanvien";
             this.cbbnhanvien.Size = new System.Drawing.Size(197, 25);
             this.cbbnhanvien.TabIndex = 5;
@@ -318,11 +317,11 @@
             this.groupBox1.Controls.Add(this.txtmathe);
             this.groupBox1.Controls.Add(this.dtpngaymuon);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(230, 63);
+            this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(725, 297);
+            this.groupBox1.Size = new System.Drawing.Size(932, 297);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
@@ -352,26 +351,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(386, 41);
+            this.label5.Location = new System.Drawing.Point(523, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nhân viên";
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(23, 63);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(192, 297);
-            this.treeView1.TabIndex = 7;
-            // 
             // frmPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 613);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btncapnhat);
@@ -422,6 +413,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbbsinhvien;
         private System.Windows.Forms.ComboBox cbbsach;
-        private System.Windows.Forms.TreeView treeView1;
     }
 }

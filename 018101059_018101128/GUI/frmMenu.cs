@@ -59,7 +59,8 @@ namespace _018101059_018101128.GUI
 
         private void phiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Phiếu mượn chưa hoàn thành xong
+            frmPhieuMuon f = new frmPhieuMuon();
+            f.Show();
         }
 
         private void phiếuBồiThườngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,6 +120,12 @@ namespace _018101059_018101128.GUI
         private void giảiQuyếtSựCốSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGiaiQuyet f = new frmGiaiQuyet();
+            f.Show();
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            frmChiTietPhieuMuon f = new frmChiTietPhieuMuon();
             f.Show();
         }
     }
