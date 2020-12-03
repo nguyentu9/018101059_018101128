@@ -3,16 +3,20 @@ go
 use QLTV
 go
 
+---------------- TÁC GIẢ ---------------------
 create table TACGIA (
 	MATG varchar(10) primary key(MATG),
 	TENTACGIA nvarchar(40)
 )
 go
+---------------- KHOA ---------------------
 create table KHOA (
 	MAKHOA varchar(10) primary key(MAKHOA),
 	TENKHOA nvarchar(40)
 )
 go
+
+---------------- LOẠI SÁCH ---------------------
 create table LOAI(
 	MATL varchar(10) primary key(MATL),
 	TENTHELOAI nvarchar(40),
@@ -21,6 +25,8 @@ create table LOAI(
 	foreign key(MAKHOA) references KHOA(MAKHOA)
 )
 go
+
+---------------- SÁCH ---------------------
 create table SACH(
 	MASH varchar(10) primary key (MASH), 
 	TENSACH nvarchar(100), 
@@ -34,6 +40,7 @@ create table SACH(
 	foreign key (MATG) references TACGIA(MATG),
 )
 go
+---------------- SINH VIÊN ---------------------
 create table SINHVIEN(
 	MASV varchar(10) primary key (MASV), 
 	HOTEN nvarchar(40), 
@@ -46,6 +53,8 @@ create table SINHVIEN(
 	foreign key(MAKHOA) references KHOA(MAKHOA)
 )
 go
+
+---------------- THẺ THƯ VIỆN ---------------------
 create table THETHUVIEN(
 	MATHE int primary key (MATHE) identity, 
 	MASV varchar(10), 
@@ -55,6 +64,7 @@ create table THETHUVIEN(
 	foreign key (MASV) references SINHVIEN (MASV)
 )
 go
+---------------- NHÂN VIÊN ---------------------
 create table NHANVIEN(
 	MANV varchar(10) primary key (MANV), 
 	HOTEN nvarchar(40), 
@@ -64,6 +74,7 @@ create table NHANVIEN(
 	SDT varchar(10)
 )
 go
+---------------- PHIẾU MƯỢN ---------------------
 create table PHIEUMUON(
 	SOPM int primary key (SOPM) identity, 
 	NGAYMUON datetime, 
@@ -79,6 +90,7 @@ create table PHIEUMUON(
 	foreign key(MANV) references NHANVIEN(MANV)
 )
 go
+---------------- CHI TIẾT PHIẾU MƯỢN ---------------------
 create table CTPM (
 	SOPM int primary key(SOPM, MASH) identity,
 	MASH varchar(10),
@@ -89,6 +101,7 @@ create table CTPM (
 )
 go
 
+---------------- NHÀ CUNG CẤP ---------------------
 create table NHACC (
 	MANCC varchar(10) primary key(MANCC),
 	TENNCC nvarchar(40),
@@ -97,6 +110,7 @@ create table NHACC (
 
 )
 go
+---------------- PHIẾU NHẬP ---------------------
 create table PHIEUNHAP(
 	MAPN varchar(10) primary key(MAPN),
 	NGAYNHAP datetime,
@@ -107,18 +121,21 @@ create table PHIEUNHAP(
 	foreign key (MANV) references NHANVIEN(MANV)
 )
 go
-
+---------------- TÌNH TRẠNG CỦA SÁCH ---------------------
 create table TINHTRANG (
 	MATT int primary key(MATT) identity,
 	TENTT nvarchar(100) unique
 )
 go
 
+---------------- CÁCH GIẢI QUYẾT SỰ CỐ ---------------------
 create table GIAIQUYET (
 	MAGQ int primary key(MAGQ) identity,
 	TENGQ nvarchar(100) unique
 )
 go
+
+---------------- PHIẾU BỒI THƯỜNG ---------------------
 create table PHIEUBOITHUONG (
 	SOBT int primary key(SOBT) identity,
 	MATT int,
@@ -133,6 +150,7 @@ create table PHIEUBOITHUONG (
 )
 go
 
+---------------- TÀI KHOẢN ---------------------
 create table TAIKHOAN (
 	MATAIKHOAN varchar(10) primary key(MATAIKHOAN),
 	TENTAIKHOAN varchar(20) unique,

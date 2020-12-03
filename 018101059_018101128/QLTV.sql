@@ -68,19 +68,17 @@ create table PHIEUMUON(
 	SOPM int primary key (SOPM)  identity, 
 	NGAYMUON datetime, 
 	NGAYTRA datetime, 
-	MASV varchar(10), 
-	MASH varchar(10), 
+	MASV varchar(10),  
 	MATHE int, 
 	MANV varchar(10)
 
 	foreign key(MASV) references SINHVIEN(MASV),
-	foreign key(MASH) references SACH(MASH),
 	foreign key(MATHE) references THETHUVIEN(MATHE),
 	foreign key(MANV) references NHANVIEN(MANV)
 )
 go
 create table CTPM (
-	SOPM int primary key(SOPM, MASH) identity,
+	SOPM int primary key(SOPM, MASH),
 	MASH varchar(10),
 	SOLUONG int
 	
@@ -255,12 +253,12 @@ insert into PHIEUNHAP values('PN001','1/9/2006','MLB','NV01');
 insert into PHIEUNHAP values('PN002','1/4/2008','DTB','NV02');
 insert into PHIEUNHAP values('PN003','10/7/2006','KDB','NV03');
 
-insert into PHIEUMUON values ('PM001','1/9/2020','8/9/2020','SV001','DCN',1,'NV01'); 
-insert into PHIEUMUON values ('PM002','1/10/2020','8/10/2020','SV002','KTN',2,'NV02'); 
-insert into PHIEUMUON values ('PM003','1/11/2020','8/11/2020','SV003','VKD',3,'NV02');
-insert into PHIEUMUON values ('PM004','5/10/2020','11/10/2020','SV004','HTTV',4,'NV03');
-insert into PHIEUMUON values ('PM005','3/12/2020','10/12/2020','SV005','SBVL',5,'NV01');
-insert into PHIEUMUON values ('PM006','5/12/2020','11/12/2020','SV006','BQLT',6,'NV03');
+insert into PHIEUMUON values ('1/9/2020','8/9/2020','SV001','DCN',1,'NV01'); 
+insert into PHIEUMUON values ('1/10/2020','8/10/2020','SV002','KTN',2,'NV02'); 
+insert into PHIEUMUON values ('1/11/2020','8/11/2020','SV003','VKD',3,'NV02');
+insert into PHIEUMUON values ('5/10/2020','11/10/2020','SV004','HTTV',4,'NV03');
+insert into PHIEUMUON values ('3/12/2020','10/12/2020','SV005','SBVL',5,'NV01');
+insert into PHIEUMUON values ('5/12/2020','11/12/2020','SV006','BQLT',6,'NV03');
 
 insert into TAIKHOAN(MATAIKHOAN, TENTAIKHOAN, MATKHAU, LOAITK) values ('NV01', 'admin', 'admin', 'admin'),
 												('NV04', 'toan', '12345', 'admin'),
