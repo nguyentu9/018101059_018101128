@@ -16,6 +16,8 @@ code lần 3:(21/11/2020)
 	frmTheThuVien
 	Tạo CrystalReport frmSinhVien
 
+Thứ 5 3/12/2020
+Chụp hình các form chạy được
 # Toàn
 lần 1:	
 	frmTacgia
