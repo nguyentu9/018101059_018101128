@@ -25,13 +25,13 @@ namespace _018101059_018101128
             //Application.Run(new frmPhieuMuon());
             //Application.Run(new frmTheThuVien());
             // Application.Run(new frmGiaiQuyet());
-            //Application.Run(new frmChiTietPhieuMuon());
+            Application.Run(new frmChiTietPhieuMuon());
             //Application.Run(new CrystalReportSinhvien());
             //Application.Run(new frmKhoa());
             //Application.Run(new frmLoai());
             //Application.Run(new frmNhaCungCap());
            //Application.Run(new frmNhanVien());
-            Application.Run(new frmSach());
+           // Application.Run(new frmSach());
         }
     }
 }
