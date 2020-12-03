@@ -22,10 +22,10 @@ namespace _018101059_018101128
             // Application.Run(new frmTacGia());
             //Application.Run(new frmPhieuNhap());
             // Application.Run(new frmPhieuBoiThuong());
-            //Application.Run(new frmPhieuMuon());
+            Application.Run(new frmPhieuMuon());
             //Application.Run(new frmTheThuVien());
             // Application.Run(new frmGiaiQuyet());
-            Application.Run(new frmChiTietPhieuMuon());
+            //Application.Run(new frmChiTietPhieuMuon());
             //Application.Run(new CrystalReportSinhvien());
             //Application.Run(new frmKhoa());
             //Application.Run(new frmLoai());
